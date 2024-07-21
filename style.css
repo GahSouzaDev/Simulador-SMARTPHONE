@@ -30,7 +30,7 @@ header
     color: white;    
     width: fit-content;
     width: 100%;
-    height: 25px;
+    height: 20px;
     justify-content: space-between;
     align-items: center;
     display: flex;       
@@ -50,9 +50,25 @@ header
     border-radius: 5px;
     cursor: pointer;
 }
-#icones
+.fas.fa-wifi {
+    font-size: 18px;
+    color: #ffffff;   
+}
+#intnotifica
 {
-    text-align:right;    
+    padding: 5px;
+    text-align: center;
+}
+section
+{
+    z-index: -1;
+    background-image:url(imagem.jpg);   
+    background-size: cover;
+    margin-left: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 655px;    
+    width: 380px;              
 }
 #notifica
 {
@@ -70,22 +86,6 @@ header
     height: 655px;    
     width: 380px;       
 }
-#intnotifica
-{
-    padding: 5px;
-    text-align: center;
-}
-section
-{
-    z-index: -1;
-    background-image:url(imagem.jpg);   
-    background-size: cover;
-    margin-left: -10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 650px;    
-    width: 380px;              
-}
 #widthhora
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,6 +98,22 @@ section
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     text-align: center;    
+}
+#icones1
+{
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    
+    align-items: center;         
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+#iconecalculadora
+{
+   width: 80px;
+   height: auto;
+   margin: -10px;    
+   border-radius: 30%;       
 }
 footer 
 {

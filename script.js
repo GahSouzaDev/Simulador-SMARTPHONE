@@ -24,15 +24,26 @@ function notificacoes() {
         notifica.style.top = '0%';
     }
 }
+
+function calculadora()
+{
+    window.location.assign('app-calculadora.html');//Carrega a pagina inicial 'F5'
+}
+
 function inicio()
 {
     window.location.assign('index.html');//Carrega a pagina inicial 'F5'
 }
 function voltar()
 {
+    const notifica = document.getElementById('notifica');
+    const currentPath = window.location.pathname;
+
     if (notifica.style.top === '0%') {
-        notifica.style.top = '-100%';//Se a barra de notificações estiver abaixada o botão de voltar levanta ela.
+        notifica.style.top = '-100%'; // Se a barra de notificações estiver abaixada, o botão de voltar levanta ela.
+    } else if (currentPath.endsWith('app-calculadora.html')) {
+        window.location.assign('index.html'); // Se estiver na página da calculadora, volta para a página inicial
     } else {
-        
+        // Se não estiver na página da calculadora, pode ser deixado vazio ou adicionar um comportamento padrão
     }
 }

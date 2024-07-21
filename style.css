@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body/*configurações gerais*/
 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -141,9 +142,11 @@ section
 
 #appcamera/*Camera*/
 {
+    position: relative;
     height: 100%;
     width: auto;    
     border-radius: 10px;
+    transform: scaleX(-1);
 }
 #camera
 {    
@@ -153,6 +156,76 @@ section
     height: 655px;    
     width: 380px;  
 }
+#capture-button/*Botão de captura da camera*/
+{
+    position: absolute;
+    bottom: 20px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);    
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10; /* Certifique-se de que o botão esteja acima do vídeo */
+    background-color: transparent;
+    width: 60px;
+}
+#capture-button:hover
+{
+    width: 65px;
+}
+#fullscreen-photo 
+{        
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Usa a altura total da tela */
+    width: 100vw; /* Usa a largura total da tela */
+    background: #000;  
+    overflow: hidden; /* Garante que nada saia dos limites */
+}  
+#captured-photo 
+{
+    width: 100%; /* Faz a largura da imagem ocupar toda a largura do container */
+    height: 100%; /* Faz a altura da imagem ocupar toda a altura do container */
+    object-fit: cover; /* Faz a imagem cobrir todo o container, mantendo a proporção */
+    transform: scaleX(-1); /* Inverte a imagem horizontalmente */
+}  
+#baixar {
+    position: absolute;
+    bottom: 20px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10; /* Certifique-se de que o botão esteja acima do vídeo */
+    background-color: transparent;
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px; /* Ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    margin-bottom: 35px;
+}
+
+#baixar i {
+    font-size: 25px; /* Ajuste o tamanho do ícone conforme necessário */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+#baixar span {
+    font-size: 25px; /* Ajuste o tamanho do texto conforme necessário */
+}
+#baixar>i:hover
+{
+    font-size: 35px;
+}
+
 
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/

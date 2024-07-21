@@ -30,6 +30,38 @@ function calculadora()
     window.location.assign('app-calculadora.html');//Carrega a pagina da calculadora
 }
 
+function capturar()
+{
+    const videoElement = document.getElementById('appcamera');
+    const canvas = document.createElement('canvas');
+    canvas.width = videoElement.videoWidth;
+    canvas.height = videoElement.videoHeight;
+    const context = canvas.getContext('2d');
+    context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+
+    // Obtém a URL de dados da imagem capturada
+    const dataURL = canvas.toDataURL('image/png');
+    
+    // Armazena a imagem no local storage
+    localStorage.setItem('capturedPhoto', dataURL);
+
+    // Redireciona para a página foto.html
+    window.location.assign('foto.html');
+}
+
+function baixar()
+{
+     // Recupera a imagem do local storage
+     const dataURL = localStorage.getItem('capturedPhoto');
+     if (dataURL) {
+         // Cria um link temporário para o download
+         const a = document.createElement('a');
+         a.href = dataURL;
+         a.download = 'foto-capturada.png'; // Nome do arquivo a ser salvo
+         a.click();    
+}
+}
+
 function inicio()
 {
     window.location.assign('index.html');//Carrega a pagina inicial 'F5'
@@ -43,7 +75,12 @@ function voltar()//Botão de navegação 'VOLTAR'
         notifica.style.top = '-100%'; // Se a barra de notificações estiver abaixada, o botão de voltar levanta ela.
     } else if (currentPath.endsWith('app-calculadora.html')||currentPath.endsWith('app-camera.html')) {
         window.location.assign('index.html'); // Verifica onde esta para aplicar a função voltar, aplicando em uma pagina de cada vez
-    } else {
+    } 
+    else if (currentPath.endsWith('foto.html'))
+        {
+            window.location.assign('app-camera.html'); // Carrega a página da câmera
+        }
+    else {
         // Se estiver na tela inicial não fazer nada!
     }
 }

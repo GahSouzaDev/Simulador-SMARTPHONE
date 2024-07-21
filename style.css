@@ -1,0 +1,103 @@
+@charset "UTF-8";
+body
+{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.725);        
+}
+article
+{
+    background-color: rgba(0, 0, 0, 0.658);
+    margin: -10px;
+    padding: 10px;
+    color: white;    
+    width: fit-content;
+    width: 100%;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;    
+}
+#hora
+{
+    text-align: right;    
+}
+#notificacao
+{      
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#icones
+{
+    text-align: left;    
+}
+main
+{
+    padding: 10px;
+    width: 360px; /* Largura para manter a proporção 18:9 */
+    height: 720px; /* Altura fixa */
+    border: 16px solid black;
+    border-radius: 36px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+section
+{
+    background-image:url(imagem.jpg);   
+    margin: 10px;
+    height: 650px;    
+    width: 100%;
+    box-sizing: border-box;
+}
+footer 
+{
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 10px;
+    margin: -10px;
+    color: white;
+    width: 100%;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative; /* Posiciona o footer relativamente ao layout */
+}
+.nav-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    border: none;
+    color: white;
+    cursor: pointer;    
+    outline: none;
+}
+.back-button::before {
+    content: "◀"; /* Triângulo para voltar */
+    font-size: 20px;    
+}
+
+.home-button::before {
+    content: "●"; /* Círculo para voltar à tela inicial */
+    font-size: 40px;
+}
+
+.history-button::before {    
+    content: "■"; /* Quadrado para ver o que estava utilizando */
+    font-size: 30px;
+    
+}
+
+.nav-button:hover {
+    background-color: #6b6b6b;
+}

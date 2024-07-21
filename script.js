@@ -49,17 +49,36 @@ function capturar()
     window.location.assign('foto.html');
 }
 
-function baixar()
-{
-     // Recupera a imagem do local storage
-     const dataURL = localStorage.getItem('capturedPhoto');
-     if (dataURL) {
-         // Cria um link temporário para o download
-         const a = document.createElement('a');
-         a.href = dataURL;
-         a.download = 'foto-capturada.png'; // Nome do arquivo a ser salvo
-         a.click();    
-}
+function baixar() {
+    // Recupera a imagem do local storage
+    const dataURL = localStorage.getItem('capturedPhoto');
+    if (dataURL) {
+        // Cria uma nova imagem
+        const img = new Image();
+        img.src = dataURL;
+
+        img.onload = () => {
+            // Cria um canvas para desenhar a imagem invertida
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            // Inverte a imagem horizontalmente
+            context.translate(canvas.width, 0);
+            context.scale(-1, 1);
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Obtém o data URL do canvas invertido
+            const invertedDataURL = canvas.toDataURL('image/png');
+
+            // Cria um link temporário para o download
+            const a = document.createElement('a');
+            a.href = invertedDataURL;
+            a.download = 'foto-capturada.png'; // Nome do arquivo a ser salvo
+            a.click();
+        };
+    }
 }
 
 function inicio()

@@ -81,6 +81,83 @@ function baixar() {
     }
 }
 
+function gravador()
+{
+    window.location.assign('app-gravador.html');//Carrega a pagina inicial 'F5'
+}
+async function play()
+{
+let mediaRecorder;
+let audioChunks = [];
+let isRecording = false;
+let startTime;
+const playBtn = document.getElementById('play');
+const recordIcon = document.getElementById('recordIcon');
+const recordingTime = document.getElementById('recordingTime');
+const recordingProgress = document.getElementById('recordingProgress');
+const RECORDING_LIMIT = 100000; // Tempo máximo de gravação em milissegundos (100 segundos)
+let timerInterval;
+
+async function startRecording() {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    
+    mediaRecorder.ondataavailable = event => {
+        audioChunks.push(event.data);
+    };
+    
+    mediaRecorder.onstop = () => {
+        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+        const audioUrl = URL.createObjectURL(audioBlob);
+        // Guarde a gravação para uso posterior
+        window.localStorage.setItem('audioRecording', audioUrl);
+        audioChunks = [];
+        clearInterval(timerInterval);
+        recordingProgress.value = 0;
+        recordingTime.textContent = '00:00';
+        window.location.href = 'reproduzir.html'; // Redireciona para a página de reprodução
+    };
+    
+    mediaRecorder.start();
+    isRecording = true;
+    startTime = Date.now();
+    recordIcon.src = 'pause.png'; // Imagem para parar a gravação
+
+    timerInterval = setInterval(updateTimer, 100);
+}
+
+function stopRecording() {
+    mediaRecorder.stop();
+    isRecording = false;
+    recordIcon.src = 'play.png'; // Imagem para iniciar a gravação
+}
+
+function updateTimer() {
+    const elapsedTime = Date.now() - startTime;
+    const seconds = Math.floor(elapsedTime / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const displaySeconds = seconds % 60;
+    recordingTime.textContent = `${minutes.toString().padStart(2, '0')}:${displaySeconds.toString().padStart(2, '0')}`;
+    
+    const progress = Math.min((elapsedTime / RECORDING_LIMIT) * 100, 100);
+    recordingProgress.value = progress;
+    
+    if (elapsedTime >= RECORDING_LIMIT) {
+        stopRecording();
+    }
+}
+
+playBtn.addEventListener('click', () => {
+    if (isRecording) {
+        stopRecording();
+    } else {
+        startRecording();
+    }
+});
+
+    
+}
+
 function inicio()
 {
     window.location.assign('index.html');//Carrega a pagina inicial 'F5'
@@ -92,9 +169,13 @@ function voltar()//Botão de navegação 'VOLTAR'
 
     if (notifica.style.top === '0%') {
         notifica.style.top = '-100%'; // Se a barra de notificações estiver abaixada, o botão de voltar levanta ela.
-    } else if (currentPath.endsWith('app-calculadora.html')||currentPath.endsWith('app-camera.html')) {
+    } else if (currentPath.endsWith('app-calculadora.html')||currentPath.endsWith('app-camera.html') || currentPath.endsWith('app-gravador.html')) {
         window.location.assign('index.html'); // Verifica onde esta para aplicar a função voltar, aplicando em uma pagina de cada vez
     } 
+    else if(currentPath.endsWith('reproduzir.html'))
+        {
+            window.location.assign('app-gravador.html');
+        }
     else if (currentPath.endsWith('foto.html'))
         {
             window.location.assign('app-camera.html'); // Carrega a página da câmera
@@ -103,3 +184,4 @@ function voltar()//Botão de navegação 'VOLTAR'
         // Se estiver na tela inicial não fazer nada!
     }
 }
+

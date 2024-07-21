@@ -66,7 +66,7 @@ header
 
 /*-------------------------CORPO do Celular-------------------------*/
 section
-{
+{    
     z-index: -1;
     background-image:url(imagem.jpg);   
     background-size: cover;
@@ -90,7 +90,8 @@ section
     margin-left: -10px;
     margin-bottom: 10px;
     height: 655px;    
-    width: 380px;       
+    width: 380px;    
+    z-index: 100;   
 }
 #widthhora/*Configura width de hora*/
 {
@@ -136,6 +137,8 @@ section
 /*-------------------------APP-------------------------*/
 #appcaculadora/*Calculadora*/
 {
+    position: relative;
+    z-index: 20;
     text-align: center;    
     font-size: 30px;
 }
@@ -147,6 +150,7 @@ section
     width: auto;    
     border-radius: 10px;
     transform: scaleX(-1);
+    z-index: 10;
 }
 #camera
 {    
@@ -190,8 +194,11 @@ section
     height: 100%; /* Faz a altura da imagem ocupar toda a altura do container */
     object-fit: cover; /* Faz a imagem cobrir todo o container, mantendo a proporção */
     transform: scaleX(-1); /* Inverte a imagem horizontalmente */
+    position: relative;
+    z-index: 30;
 }  
-#baixar {
+#baixar 
+{
     position: absolute;
     bottom: 20px; /* Ajuste conforme necessário */
     left: 50%;
@@ -210,20 +217,21 @@ section
     flex-direction: column;
     text-align: center;
     color: white;
-    margin-bottom: 35px;
+    margin-bottom: 50px;    
+    z-index: 40;
 }
-
-#baixar i {
-    font-size: 25px; /* Ajuste o tamanho do ícone conforme necessário */
+#baixar i 
+{
+    font-size: 35px; /* Ajuste o tamanho do ícone conforme necessário */
     margin-right: 8px; /* Espaço entre o ícone e o texto */
 }
-
-#baixar span {
+#baixar span
+ {
     font-size: 25px; /* Ajuste o tamanho do texto conforme necessário */
 }
 #baixar>i:hover
 {
-    font-size: 35px;
+    font-size: 45px;
 }
 
 

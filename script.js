@@ -14,5 +14,5 @@ function notificacoes()
 }
 function inicio()
 {
-    window.location.assign('simulador.html');
+   window.location.assign('index.html');
 }

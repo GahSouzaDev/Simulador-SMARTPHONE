@@ -24,7 +24,7 @@ main/*Configurações do contorno do celular*/
     overflow: hidden;
 }
 
-/*-------------------------BARRA DE NOTIFICAÇÕES-------------------------*/
+/*--------------------BARRA DE NOTIFICAÇÕES-----------------------*/
 header
 {
     background-color: rgba(0, 0, 0, 0.658);
@@ -64,7 +64,7 @@ header
     text-align: center;
 }
 
-/*-------------------------CORPO do Celular-------------------------*/
+/*------------------------CORPO do Celular------------------------*/
 section
 {    
     z-index: -1;
@@ -135,7 +135,9 @@ section
 }
 
 /*-------------------------APP-------------------------*/
-#appcaculadora/*Calculadora*/
+
+/*------------------------CALCULADORA-------------------------*/
+#appcaculadora
 {
     position: relative;
     z-index: 20;
@@ -143,7 +145,8 @@ section
     font-size: 30px;
 }
 
-#appcamera/*Camera*/
+/*-----------------------CAMERA------------------------*/
+#appcamera
 {
     position: relative;
     height: 100%;
@@ -234,6 +237,71 @@ section
     font-size: 45px;
 }
 
+/*-----------------------GRAVADOR-------------------------*/
+#recordIcon
+{
+    position: absolute;
+    bottom: 70px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);    
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10; /* Certifique-se de que o botão esteja acima do vídeo */
+    background-color: transparent;
+    width: 70px;
+}
+#recordIcon:hover
+{
+    width: 115px;
+}
+#recordIcon
+ {
+    width: 100px; /* Ajuste conforme necessário */
+}
+
+#recordingTime 
+{    
+    font-size: 24px;
+    margin-top: auto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 80px;    
+}
+#audioControls 
+{
+    display: flex;    
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+}
+#audioPlayer 
+{    
+    width: 100%;
+    max-width: 600px;
+    
+}
+#reproduzir
+{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;       
+    height: 655px;    
+    width: 380px;  
+}
+
+progress 
+{
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    padding: 50px;
+}
 
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/

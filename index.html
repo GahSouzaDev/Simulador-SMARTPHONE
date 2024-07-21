@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador SMARTPHONE</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <main>
+
         <header><!--Barra de notificações-->
-            <div id="icones">
-                teste                   
-            </div>
+            <i class="fas fa-wifi"></i>
             <button id="notificacao" onclick="notificacoes()"><!--Acionador da barra de notificações-->
                 NOTIFICAÇÕES            
             </button>
@@ -24,17 +25,24 @@
             <div id="hora"><!--Hora na barra de notificações-->
             </div>                        
         </header>
-        <section>
+
+        <section><!--Corpo do dispositivo-->
             <div id="widthhora"></div>
             <div id="widthdata"></div>
-        </section><!--Corpo do dispositivo-->
+            <div id="icones1">
+            <button id="iconecalculadora" onclick="calculadora()"><img id="iconecalculadora" src="calculadora.png" alt="icone da calculadora"></button>
+            </div>
+        </section>
+
         <footer><!--Botões de navegação-->
             <button class="nav-button back-button" title="Voltar" onclick="voltar()"></button>
             <button class="nav-button home-button" title="Tela Inicial"
             onclick="inicio()"></button>
             <button class="nav-button history-button" title="Histórico"></button>
         </footer>
+
     </main>
 <script src="script.js"></script>
 </body>
+
 </html>

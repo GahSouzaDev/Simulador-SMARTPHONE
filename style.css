@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body
+body/*configurações gerais*/
 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 100%;
@@ -10,7 +10,7 @@ body
     background-color: rgba(0, 0, 0, 0.725);    
     color: white;     
 }
-main
+main/*Configurações do contorno do celular*/
 {   
     position: relative;
     padding: 10px;
@@ -22,6 +22,8 @@ main
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);    
     overflow: hidden;
 }
+
+/*-------------------------BARRA DE NOTIFICAÇÕES-------------------------*/
 header
 {
     background-color: rgba(0, 0, 0, 0.658);
@@ -36,11 +38,11 @@ header
     display: flex;       
     border-radius: 0px;
 }
-#hora
+#hora/*Configurações da hora na barra de notificações*/
 {
     text-align:left;    
 }
-#notificacao
+#notificacao/*Configurações da barra de notificações*/
 {      
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -49,17 +51,19 @@ header
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 35px;
+    margin-left: 25px;
 }
-.fas.fa-wifi {
+.fas.fa-wifi {/*Configurações do icone de sinal na barra de notificações*/
     font-size: 18px;
     color: #ffffff;   
 }
-#intnotifica
+#intnotifica/*COnfigura lista de notificações*/
 {
     padding: 5px;
     text-align: center;
 }
+
+/*-------------------------CORPO do Celular-------------------------*/
 section
 {
     z-index: -1;
@@ -71,7 +75,7 @@ section
     height: 655px;    
     width: 380px;              
 }
-#notifica
+#notifica/*Animação para abaixar as notificações no corpo do celular*/
 {
     position: absolute;
     top: -100%;
@@ -87,28 +91,28 @@ section
     height: 655px;    
     width: 380px;       
 }
-#widthhora
+#widthhora/*Configura width de hora*/
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 60px;
     font-size: 60px;
     text-align: center;    
 }
-#widthdata
+#widthdata/*Configura o width de data*/
 {    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     text-align: center;   
     padding-bottom: 50px; 
 }
-#icones1
+#icones1/*Configura tamanho e posição dos icones na pagina inicial*/
 {    
     margin: 10px;
     padding: 30px;    
     display: flex;    
     align-items: center;        
     gap: 45px;
-}
+}/*Configura propriedades dos icones*/
 #iconecalculadora
 {
    width: 70px;
@@ -121,18 +125,37 @@ section
    text-align: center; /* Centraliza o texto */
    color: rgb(255, 255, 255);
    border: none;
-}
+}/*COnfigura animação nos icones*/
 #iconecalculadora:hover
 {
     transform: scale(1.1);   
     transition: transform 0.2s;
 }
-#appcaculadora
+
+/*-------------------------APP-------------------------*/
+#appcaculadora/*Calculadora*/
 {
     text-align: center;    
     font-size: 30px;
 }
-footer 
+
+#appcamera/*Camera*/
+{
+    height: 100%;
+    width: auto;    
+    border-radius: 10px;
+}
+#camera
+{    
+    display: flex;
+    justify-content: center;
+    align-items: center;       
+    height: 655px;    
+    width: 380px;  
+}
+
+/*-------------------------NAVEGAÇÂO-------------------------*/
+footer/*Configura espaço*/
 {
     background-color: rgba(0, 0, 0, 0.658);
     padding: 10px;
@@ -145,7 +168,8 @@ footer
     display: flex;
     position: relative; /* Posiciona o footer relativamente ao layout */
 }
-.nav-button {
+.nav-button/*Configura tamanho e posição dos botões de navegação*/
+{
     width: 40px;
     height: 40px;
     display: flex;
@@ -157,22 +181,24 @@ footer
     cursor: pointer;    
     outline: none;
 }
-.back-button::before {
+.back-button::before/*VOLTAR*/
+{
     content: "◀"; /* Triângulo para voltar */
     font-size: 25px;    
 }
 
-.home-button::before {
+.home-button::before/*INICIO*/
+{
     content: "●"; /* Círculo para voltar à tela inicial */
     font-size: 40px;
 }
 
-.history-button::before {    
+.history-button::before /*HISTORICO*/
+{    
     content: "■"; /* Quadrado para ver o que estava utilizando */
-    font-size: 30px;
-    
+    font-size: 30px;    
 }
-
-.nav-button:hover {
+.nav-button:hover/*Configura animação dos botões de navegação*/
+{
     background-color: #6b6b6b;
 }

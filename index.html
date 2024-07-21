@@ -1,38 +1,40 @@
-function updateClock()
-{
-let h = new Date();//Pega hora do dispositivo
-let hor = h.getHours().toString().padStart(2, '0');//Guarda a hora em 'hor' colocando '0' se o valor for de apenas uma casa decimal
-let min = h.getMinutes().toString().padStart(2, '0');//Guarada os minutos em 'min' com a mesma função de adicionar o '0'
-let dia = h.getDate().toString().padStart(2, '0');;
-let mes = (h.getMonth() + 1).toString().padStart(2, '0');
-let ano = h.getFullYear();
-
-window.document.getElementById('hora').textContent = `${hor} : ${min}`;//Exibe a hora na div com id 'hora'
-window.document.getElementById('data').textContent = `${dia} / ${mes} / ${ano}`;
-
-window.document.getElementById('widthhora').textContent = `${hor} : ${min}`;
-window.document.getElementById('widthdata').textContent = `${dia} / ${mes} / ${ano}`;
-}
-setInterval(updateClock, 1000);//Atualiza o relogio a cada 1000 milisegundos
-updateClock();//Atualiza a hora assim que a pagina é carregada
-
-function notificacoes() {
-    const notifica = document.getElementById('notifica');
-    if (notifica.style.top === '0%') {
-        notifica.style.top = '-100%';
-    } else {
-        notifica.style.top = '0%';
-    }
-}
-function inicio()
-{
-    window.location.assign('index.html');
-}
-function voltar()
-{
-    if (notifica.style.top === '0%') {
-        notifica.style.top = '-100%';
-    } else {
-        
-    }
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador SMARTPHONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header><!--Barra de notificações-->
+            <div id="icones">
+                teste                   
+            </div>
+            <button id="notificacao" onclick="notificacoes()"><!--Acionador da barra de notificações-->
+                NOTIFICAÇÕES            
+            </button>
+            <div id="notifica"><!--Conteudo da barra de notificações-->
+                   <div id="intnotifica">
+                    <p></p><!--Exibe a data na barra de notificações--> 
+                   <p id="data">Notificação</p>
+                   </div>
+            </div>
+            <div id="hora"><!--Hora na barra de notificações-->
+            </div>                        
+        </header>
+        <section>
+            <div id="widthhora"></div>
+            <div id="widthdata"></div>
+        </section><!--Corpo do dispositivo-->
+        <footer><!--Botões de navegação-->
+            <button class="nav-button back-button" title="Voltar" onclick="voltar()"></button>
+            <button class="nav-button home-button" title="Tela Inicial"
+            onclick="inicio()"></button>
+            <button class="nav-button history-button" title="Histórico"></button>
+        </footer>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>

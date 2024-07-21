@@ -42,6 +42,7 @@ article
 }
 main
 {   
+    position: relative;
     padding: 10px;
     width: 360px; /* Largura para manter a proporção 18:9 */
     height: 720px; /* Altura fixa */
@@ -49,6 +50,7 @@ main
     border-radius: 36px;
     background-color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);    
+    overflow: hidden;
 }
 section
 {
@@ -71,10 +73,10 @@ section
     justify-content: center;
     align-items: center;
     transition: top 0.5s ease-in-out;    
-    margin-top: 59px;
+    margin-top: 40px;
     margin-left: -10px;
     margin-bottom: 10px;
-    height: 630px;    
+    height: 655px;    
     width: 380px;       
 }
 footer 

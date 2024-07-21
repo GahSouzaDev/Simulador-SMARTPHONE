@@ -8,11 +8,15 @@ window.document.getElementById('hora').textContent = `${hor} : ${min}`;//Exibe a
 setInterval(updateClock, 1000);//Atualiza o relogio a cada 1000 milisegundos
 updateClock();//Atualiza a hora assim que a pagina é carregada
 
-function notificacoes()
-{      
-    window.document.getElementById('notificacao').innerHTML= 'OPEN'
+function notificacoes() {
+    const notifica = document.getElementById('notifica');
+    if (notifica.style.top === '0%') {
+        notifica.style.top = '-100%';
+    } else {
+        notifica.style.top = '0%';
+    }
 }
 function inicio()
 {
-   window.location.assign('index.html');
+    window.location.assign('index.html');
 }

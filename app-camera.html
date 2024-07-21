@@ -26,20 +26,22 @@
             </div>                        
         </header>
 
-        <section id="camera"><!--Corpo do dispositivo-->            
-            <video id="appcamera" autoplay></video>     
+        <section id="camera"><!--Corpo do dispositivo-->             
+            <video id="appcamera" autoplay></video>
+            <button id="capture-button" onclick="capturar()"><img src="capturar.png" alt="Botão de capturar" id="capture-button"></button>     
             <script>
-            document.addEventListener('DOMContentLoaded', async () => {
-                try {
-                    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                    const videoElement = document.getElementById('appcamera');
-                    if (videoElement) {
-                        videoElement.srcObject = stream;
-                    }
-                } catch (error) {
-                    console.error('Erro ao acessar a câmera: ', error);
+                 document.addEventListener('DOMContentLoaded', async () => {
+            const videoElement = document.getElementById('appcamera');
+            
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                if (videoElement) {
+                    videoElement.srcObject = stream;
                 }
-            });
+            } catch (error) {
+                console.error('Erro ao acessar a câmera: ', error);
+            }
+        });
             </script>                 
         </section>               
 

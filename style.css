@@ -1,49 +1,170 @@
-function updateClock()
+@charset "UTF-8";
+body
 {
-let h = new Date();//Pega hora do dispositivo
-let hor = h.getHours().toString().padStart(2, '0');//Guarda a hora em 'hor' colocando '0' se o valor for de apenas uma casa decimal
-let min = h.getMinutes().toString().padStart(2, '0');//Guarada os minutos em 'min' com a mesma função de adicionar o '0'
-let dia = h.getDate().toString().padStart(2, '0');;
-let mes = (h.getMonth() + 1).toString().padStart(2, '0');
-let ano = h.getFullYear();
-
-window.document.getElementById('hora').textContent = `${hor} : ${min}`;//Exibe a hora na div com id 'hora'
-window.document.getElementById('data').textContent = `${dia} / ${mes} / ${ano}`;
-
-window.document.getElementById('widthhora').textContent = `${hor} : ${min}`;
-window.document.getElementById('widthdata').textContent = `${dia} / ${mes} / ${ano}`;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.725);    
+    color: white;     
 }
-setInterval(updateClock, 1000);//Atualiza o relogio a cada 1000 milisegundos
-updateClock();//Atualiza a hora assim que a pagina é carregada
-
-function notificacoes() {
-    const notifica = document.getElementById('notifica');//Ativa animação da barra de notificações
-    if (notifica.style.top === '0%') {
-        notifica.style.top = '-100%';
-    } else {
-        notifica.style.top = '0%';
-    }
+main
+{   
+    position: relative;
+    padding: 10px;
+    width: 360px; /* Largura para manter a proporção 18:9 */
+    height: 720px; /* Altura fixa */
+    border: 16px solid black;
+    border-radius: 36px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);    
+    overflow: hidden;
 }
-
-function calculadora()
+header
 {
-    window.location.assign('app-calculadora.html');//Carrega a pagina inicial 'F5'
+    background-color: rgba(0, 0, 0, 0.658);
+    margin: -10px;
+    padding: 10px;
+    color: white;    
+    width: fit-content;
+    width: 100%;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;       
+    border-radius: 0px;
+}
+#hora
+{
+    text-align:left;    
+}
+#notificacao
+{      
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+.fas.fa-wifi {
+    font-size: 18px;
+    color: #ffffff;   
+}
+#intnotifica
+{
+    padding: 5px;
+    text-align: center;
+}
+section
+{
+    z-index: -1;
+    background-image:url(imagem.jpg);   
+    background-size: cover;
+    margin-left: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 655px;    
+    width: 380px;              
+}
+#notifica
+{
+    position: absolute;
+    top: -100%;
+    left: auto;      
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;     
+    justify-content: center;
+    align-items: center;
+    transition: top 0.5s ease-in-out;    
+    margin-top: 40px;
+    margin-left: -10px;
+    margin-bottom: 10px;
+    height: 655px;    
+    width: 380px;       
+}
+#widthhora
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+    font-size: 60px;
+    text-align: center;    
+}
+#widthdata
+{    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    text-align: center;    
+}
+#icones1
+{
+    margin: 10px;
+    padding: 30px;
+    display: flex;    
+    align-items: center;         
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+#iconecalculadora
+{
+   width: 80px;
+   height: auto;
+   margin: -10px;    
+   border-radius: 30%;       
+}
+#iconecalculadora:hover
+{
+    width: 90px;
+}
+#appcaculadora
+{
+    text-align: center;    
+    font-size: 30px;
+}
+footer 
+{
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 10px;
+    margin: -10px;
+    color: white;
+    width: 100%;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative; /* Posiciona o footer relativamente ao layout */
+}
+.nav-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555;
+    border: none;
+    color: white;
+    cursor: pointer;    
+    outline: none;
+}
+.back-button::before {
+    content: "◀"; /* Triângulo para voltar */
+    font-size: 25px;    
 }
 
-function inicio()
-{
-    window.location.assign('index.html');//Carrega a pagina inicial 'F5'
+.home-button::before {
+    content: "●"; /* Círculo para voltar à tela inicial */
+    font-size: 40px;
 }
-function voltar()
-{
-    const notifica = document.getElementById('notifica');
-    const currentPath = window.location.pathname;
 
-    if (notifica.style.top === '0%') {
-        notifica.style.top = '-100%'; // Se a barra de notificações estiver abaixada, o botão de voltar levanta ela.
-    } else if (currentPath.endsWith('app-calculadora.html')) {
-        window.location.assign('index.html'); // Se estiver na página da calculadora, volta para a página inicial
-    } else {
-        // Se não estiver na página da calculadora, pode ser deixado vazio ou adicionar um comportamento padrão
-    }
+.history-button::before {    
+    content: "■"; /* Quadrado para ver o que estava utilizando */
+    font-size: 30px;
+    
+}
+
+.nav-button:hover {
+    background-color: #6b6b6b;
 }

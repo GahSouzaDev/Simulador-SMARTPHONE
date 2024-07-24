@@ -250,6 +250,7 @@ section
     width: 380px;
     position: relative;
     z-index: 60;
+    margin-left: -10px;
 }
 #recordingTime 
 {
@@ -271,7 +272,7 @@ audio
     margin: auto;
     margin-bottom: 150px;
     display: flex;
-    width: 90%;      
+    width: 100%;        
 }
 #buttonsContainer 
 {

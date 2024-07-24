@@ -241,7 +241,7 @@ section
 
 /*-----------------------GRAVADOR-------------------------*/
 #gravador 
-{
+{ 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,7 +250,7 @@ section
     width: 380px;
     position: relative;
     z-index: 60;
-    margin-left: -10px;
+    padding-left: -10px;
 }
 #recordingTime 
 {
@@ -258,7 +258,6 @@ section
     font-size: 80px;
     margin-top: 80px; /* Espaço entre o tempo de gravação e os botões */
 }
-
 #recordingProgress 
 {
     margin: auto;
@@ -331,8 +330,8 @@ footer/*Configura espaço*/
 }
 .nav-button/*Configura tamanho e posição dos botões de navegação*/
 {
-    width: 408px;
-    height: 10px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

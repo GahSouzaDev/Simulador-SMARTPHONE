@@ -261,22 +261,14 @@ section
 }
 #recordingProgress 
 {
-    width: 90%;
+    width: 60%;
     height: 30px;
     margin-bottom: 150px; /* Espaço entre o progresso e os botões */       
-    padding-left: -10px;
-    margin-left: -10px;
 }
 #audioPlayback
 {    
-    margin-bottom: 180px;
-    display: flex;
-    width: 90%;    
-    align-items: center;
-    justify-content: center;
-    justify-items: center;    
-    padding-left: -10px;
-    margin-left: -10px;
+    margin-bottom: 180px;    
+    width: 88%;     
 }
 #buttonsContainer 
 {

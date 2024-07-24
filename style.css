@@ -52,7 +52,9 @@ header
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
 }
 .fas.fa-wifi {/*Configurações do icone de sinal na barra de notificações*/
     font-size: 18px;

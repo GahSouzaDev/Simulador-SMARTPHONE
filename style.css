@@ -268,7 +268,9 @@ section
 #audioPlayback
 {    
     margin-bottom: 180px;    
-    width: 88%;     
+    width: 88%;           
+    padding-left: -10px;
+    margin-left: -10px;
 }
 #buttonsContainer 
 {

@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <main>
-
         <header><!--Barra de notificações-->
             <i class="fas fa-wifi"></i>
             <button id="notificacao" onclick="notificacoes()"><!--Acionador da barra de notificações-->
@@ -26,22 +24,27 @@
             </div>                        
         </header>
 
-        <section id="navegador"><!--navegador--> 
-            <p id="recordingTime">00:00</p>
-            <progress id="recordingProgress" value="0" max="100"></progress>
-           <div
-           id="play"><img src="play.png" alt="Botão de play" id="recordIcon" onclick="play()"></div>   
+        <section id="gravador"><!--gravador--> 
+            <p id="recordingTime">00:00</p>            
+            <progress id="recordingProgress" value="0" max="100"></progress>    
+            <audio id="audioPlayback" controls></audio> 
+            <div id="buttonsContainer">
+                <button id="recordBtn">
+                    <img src="play.png" alt="Botão PLAY" id="recordIcon">
+                </button>
+                <button id="stopBtn" disabled>
+                    <img src="pause.png" alt="Botão PAUSE" id="recordIcon">
+                </button>
+            </div>                     
         </section>               
 
         <footer><!--Botões de navegação-->
             <button class="nav-button back-button" title="Voltar" onclick="voltar()"></button>
-            <button class="nav-button home-button" title="Tela Inicial"
-            onclick="inicio()"></button>
+            <button class="nav-button home-button" title="Tela Inicial" onclick="inicio()"></button>
             <button class="nav-button history-button" title="Histórico"></button>
         </footer>
-
     </main>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="script-gravador.js"></script>
 </body>
-
 </html>

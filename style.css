@@ -263,14 +263,20 @@ section
 {
     width: 90%;
     height: 30px;
-    margin-bottom: 150px; /* Espaço entre o progresso e os botões */
-    display: flex;
+    margin-bottom: 150px; /* Espaço entre o progresso e os botões */       
+    padding-left: -10px;
+    margin-left: -10px;
 }
-audio 
+#audioPlayback
 {    
-    margin-bottom: 150px;
+    margin-bottom: 180px;
     display: flex;
-    width: 90%;        
+    width: 90%;    
+    align-items: center;
+    justify-content: center;
+    justify-items: center;    
+    padding-left: -10px;
+    margin-left: -10px;
 }
 #buttonsContainer 
 {

@@ -344,13 +344,13 @@ footer/*Configura espaço*/
 .back-button::before/*VOLTAR*/
 {
     content: "◀"; /* Triângulo para voltar */
-    font-size: 30px;    
+    font-size: 35px;    
 }
 
 .home-button::before/*INICIO*/
 {
     content: "●"; /* Círculo para voltar à tela inicial */
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .history-button::before /*HISTORICO*/

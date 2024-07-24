@@ -47,7 +47,7 @@ header
 {      
     background-color: rgba(0, 0, 0, 0);
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -98,7 +98,9 @@ section
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 60px;
     font-size: 60px;
-    text-align: center;    
+    text-align: center;   
+    justify-content: center; 
+    display: flex;
 }
 #widthdata/*Configura o width de data*/
 {    
@@ -238,69 +240,71 @@ section
 }
 
 /*-----------------------GRAVADOR-------------------------*/
-#recordIcon
+#gravador 
 {
-    position: absolute;
-    bottom: 70px; /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);    
-    border: none;
-    border-radius: 50%;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10; /* Certifique-se de que o botão esteja acima do vídeo */
-    background-color: transparent;
-    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 655px;
+    width: 380px;
+    position: relative;
+    z-index: 60;
 }
-#recordIcon:hover
+#recordingTime 
 {
-    width: 115px;
-}
-#recordIcon
- {
-    width: 100px; /* Ajuste conforme necessário */
+    font-size: 80px;
+    margin-top: 20px; /* Espaço entre o tempo de gravação e os botões */
 }
 
-#recordingTime 
-{    
-    font-size: 24px;
-    margin-top: auto;
-    padding-top: 30px;
+#recordingProgress 
+{
+    width: 300px;
+    height: 30px;
+    margin-top: -55px; /* Espaço entre o progresso e os botões */
+}
+audio 
+{
+    margin-top: 100px;
+    width: 100%;      
+}
+#buttonsContainer 
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-size: 80px;    
+    gap: 20px; /* Espaço entre os botões */
 }
-#audioControls 
+button 
 {
-    display: flex;    
-    width: 100%;
-    height: auto;
-    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-#audioPlayer 
-{    
-    width: 100%;
-    max-width: 600px;
-    
-}
-#reproduzir
+button:disabled 
 {
-    display: flex;
-    flex-direction: column;    
-    align-items: center;       
-    height: 655px;    
-    width: 380px;  
+    opacity: 0.5;
+    cursor: not-allowed;
 }
-
-progress 
+#recordIcon 
 {
-    width: 100%;
-    height: 20px;
-    margin: 10px 0;
-    padding: 50px;
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 90px;
+}
+#recordBtn img,
+#stopBtn img 
+{
+    transition: width 0.2s; /* Transição suave para o hover */
+}
+#recordBtn:hover img,
+#stopBtn:hover img 
+{
+    width: 70px; /* Manter o tamanho durante o hover */
 }
 
 /*-------------------------NAVEGAÇÂO-------------------------*/
@@ -308,7 +312,8 @@ footer/*Configura espaço*/
 {
     background-color: rgba(0, 0, 0, 0.658);
     padding: 10px;
-    margin: -10px;
+    margin-top: -10px;
+    margin-left: -10px;
     color: white;
     width: 100%;
     height: 25px;
@@ -320,7 +325,7 @@ footer/*Configura espaço*/
 .nav-button/*Configura tamanho e posição dos botões de navegação*/
 {
     width: 40px;
-    height: 40px;
+    height: 10px;
     display: flex;
     justify-content: center;
     align-items: center;

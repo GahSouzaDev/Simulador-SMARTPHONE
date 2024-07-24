@@ -52,7 +52,7 @@ header
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 35px;
+    margin-left: 40px;
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -271,8 +271,7 @@ section
 #audioPlayback
 {    
     margin-bottom: 180px;    
-    width: 90%;           
-    padding-left: -10px;
+    width: 95%;    
     margin-left: -10px;
 }
 #buttonsContainer 

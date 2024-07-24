@@ -251,6 +251,7 @@ section
     position: relative;
     z-index: 60;
     padding-left: -10px;
+    margin-left: -10px;
 }
 #recordingTime 
 {
@@ -260,15 +261,13 @@ section
 }
 #recordingProgress 
 {
-    margin: auto;
     width: 90%;
     height: 30px;
     margin-bottom: 150px; /* Espaço entre o progresso e os botões */
     display: flex;
 }
 audio 
-{
-    margin: auto;
+{    
     margin-bottom: 150px;
     display: flex;
     width: 90%;        
@@ -298,8 +297,7 @@ button:disabled
 {
     width: 60px;
     height: auto;
-    border-radius: 50%;
-    margin: auto;
+    border-radius: 50%;    
     margin-bottom: 15px;     
 }
 #recordBtn img,

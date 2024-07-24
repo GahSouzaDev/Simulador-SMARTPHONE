@@ -52,7 +52,7 @@ header
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 35px;
     align-items: center;
     justify-content: center;
     height: 40px;
@@ -271,7 +271,7 @@ section
 #audioPlayback
 {    
     margin-bottom: 180px;    
-    width: 88%;           
+    width: 90%;           
     padding-left: -10px;
     margin-left: -10px;
 }
@@ -311,7 +311,7 @@ button:disabled
 #recordBtn:hover img,
 #stopBtn:hover img 
 {
-    width: 70px; /* Manter o tamanho durante o hover */
+    width: 65px; /* Manter o tamanho durante o hover */
 }
 
 /*-------------------------NAVEGAÇÂO-------------------------*/

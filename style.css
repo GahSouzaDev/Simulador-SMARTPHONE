@@ -253,20 +253,23 @@ section
 }
 #recordingTime 
 {
+    margin: auto;
     font-size: 80px;
-    margin-top: 20px; /* Espaço entre o tempo de gravação e os botões */
+    margin-top: 80px; /* Espaço entre o tempo de gravação e os botões */
 }
 
 #recordingProgress 
 {
+    margin: auto;
     width: 300px;
     height: 30px;
-    margin-top: -55px; /* Espaço entre o progresso e os botões */
+    margin-bottom: 150px; /* Espaço entre o progresso e os botões */
 }
 audio 
 {
-    margin-top: 100px;
-    width: 100%;      
+    margin: auto;
+    margin-bottom: 1px;
+    width: 90%;      
 }
 #buttonsContainer 
 {
@@ -294,7 +297,8 @@ button:disabled
     width: 60px;
     height: auto;
     border-radius: 50%;
-    margin-top: 90px;
+    margin: auto;
+    margin-bottom: 15px;
 }
 #recordBtn img,
 #stopBtn img 
@@ -324,7 +328,7 @@ footer/*Configura espaço*/
 }
 .nav-button/*Configura tamanho e posição dos botões de navegação*/
 {
-    width: 40px;
+    width: 408px;
     height: 10px;
     display: flex;
     justify-content: center;

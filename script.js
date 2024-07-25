@@ -60,33 +60,10 @@ function capturar() {
         const context = canvas.getContext('2d');
         context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
 
-        let dataURL = canvas.toDataURL('image/png');
+        const dataURL = canvas.toDataURL('image/png');
+        localStorage.setItem('capturedPhoto', dataURL);
 
-        // Inverter a imagem se a câmera for frontal
-        if (currentFacingMode === 'user') {
-            const img = new Image();
-            img.src = dataURL;
-
-            img.onload = () => {
-                const invertedCanvas = document.createElement('canvas');
-                const invertedContext = invertedCanvas.getContext('2d');
-                invertedCanvas.width = img.width;
-                invertedCanvas.height = img.height;
-
-                invertedContext.translate(invertedCanvas.width, 0);
-                invertedContext.scale(-1, 1);
-                invertedContext.drawImage(img, 0, 0, invertedCanvas.width, invertedCanvas.height);
-
-                dataURL = invertedCanvas.toDataURL('image/png');
-
-                localStorage.setItem('capturedPhoto', dataURL);
-                window.location.assign('foto.html');
-            };
-        } else {
-            // Se a câmera não for frontal, apenas armazena a imagem
-            localStorage.setItem('capturedPhoto', dataURL);
-            window.location.assign('foto.html');
-        }
+        window.location.assign('foto.html');
     } else {
         console.error('Elemento de vídeo não encontrado.');
     }
@@ -104,12 +81,14 @@ function baixar() {
             canvas.width = img.width;
             canvas.height = img.height;
 
-            context.drawImage(img, 0, 0);
+            context.translate(canvas.width, 0);
+            context.scale(-1, 1);
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-            const finalDataURL = canvas.toDataURL('image/png');
+            const invertedDataURL = canvas.toDataURL('image/png');
 
             const a = document.createElement('a');
-            a.href = finalDataURL;
+            a.href = invertedDataURL;
             a.download = 'foto-capturada.png';
             a.click();
         };
@@ -117,7 +96,6 @@ function baixar() {
         console.error('Nenhuma foto encontrada no localStorage.');
     }
 }
-
 function gravador() {
     window.location.assign('app-gravador.html');
 }

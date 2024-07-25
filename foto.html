@@ -30,17 +30,51 @@
             <img id="captured-photo" src="" alt="Foto Capturada">
             <button id="baixar" onclick="baixar()"><i class="fas fa-download"></i><span>Baixar</span></button>
             <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const photoElement = document.getElementById('captured-photo');
-        
-                    // Recupera a imagem do local storage
-                    const dataURL = localStorage.getItem('capturedPhoto');
-                    if (dataURL) {
-                        photoElement.src = dataURL;
-                    } else {
-                        photoElement.alt = 'Nenhuma foto capturada';
-                    }
-                });
+               document.addEventListener('DOMContentLoaded', () => {
+    const photoElement = document.getElementById('captured-photo');
+
+    // Recupera a imagem e o tipo de câmera do local storage
+    const dataURL = localStorage.getItem('capturedPhoto');
+    const facingMode = localStorage.getItem('facingMode'); // Armazena o modo da câmera (user ou environment)
+
+    if (dataURL) {
+        // Se a câmera foi frontal, inverta a imagem
+        if (facingMode === 'user') {
+            const img = new Image();
+            img.src = dataURL;
+
+            img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                context.translate(canvas.width, 0);
+                context.scale(-1, 1);
+                context.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                photoElement.src = canvas.toDataURL('image/png');
+            };
+        } else {
+            photoElement.src = dataURL;
+        }
+    } else {
+        photoElement.alt = 'Nenhuma foto capturada';
+    }
+});
+
+function baixar() {
+    const dataURL = document.getElementById('captured-photo').src;
+    if (dataURL) {
+        const a = document.createElement('a');
+        a.href = dataURL;
+        a.download = 'foto-capturada.png';
+        a.click();
+    } else {
+        console.error('Nenhuma foto encontrada para baixar.');
+    }
+}
+
             </script>
         </section>          
 

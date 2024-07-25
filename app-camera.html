@@ -31,9 +31,8 @@
             <button id="capture-button" onclick="capturar()"><img src="capturar.png" alt="Botão de capturar" id="capture-button"></button>     
             <button id="virar-camera" onclick="virar()"><img src="virar.png" alt="Botão de capturar" id="flip-button"></button>  
             <script>
-                 let currentStream = null;
+                let currentStream = null;
 let currentFacingMode = 'user'; // 'user' para a câmera frontal, 'environment' para a câmera traseira
-
 
 document.addEventListener('DOMContentLoaded', async () => {
     const videoElement = document.getElementById('appcamera');
@@ -47,6 +46,9 @@ async function iniciarCamera(videoElement) {
         }
         currentStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: currentFacingMode } });
         videoElement.srcObject = currentStream;
+
+        // Aplicar transformação ao vídeo conforme a câmera selecionada
+        videoElement.style.transform = currentFacingMode === 'environment' ? 'scaleX(1)' : 'scaleX(-1)';
     } catch (error) {
         console.error('Erro ao acessar a câmera: ', error);
     }

@@ -49,7 +49,7 @@ async function virar() {
     currentFacingMode = currentFacingMode === 'user' ? 'environment' : 'user'; // Alterna entre frontal e traseira
     const videoElement = document.getElementById('appcamera');
     await iniciarCamera(videoElement); // Reinicia a câmera com o novo facingMode   
-    videoElement.style.transform = isFrontCamera ? 'scaleX(-1)' : 'scaleX(1)';
+    videoElement.style.transform = isFrontCamera ? 'scaleX(1)' : 'scaleX(-1)';
 }
 
 function capturar() {
@@ -61,7 +61,7 @@ function capturar() {
         const context = canvas.getContext('2d');
 
         // Aplica a transformação ao contexto do canvas para corresponder à configuração da câmera
-        if (currentFacingMode === 'environmet') {
+        if (currentFacingMode === 'environment') {
             // Ajuste para a câmera frontal
             context.save(); // Salva o estado atual do contexto
             context.scale(-1, 1); // Inverte horizontalmente

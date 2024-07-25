@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador SMARTPHONE</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -14,7 +14,7 @@
         <header><!--Barra de notificações-->
             <i class="fas fa-wifi"></i>
             <button id="notificacao" onclick="notificacoes()"><!--Acionador da barra de notificações-->
-                NOTIFICAÇÕES            
+                <strong>NOTIFICAÇÕES</strong>            
             </button>
             <div id="notifica"><!--Conteudo da barra de notificações-->
                    <div id="intnotifica">
@@ -27,7 +27,63 @@
         </header>
 
         <section id="appcaculadora"><!--Corpo do dispositivo-->
-            Em desenvolvimento...
+            <input type="text" id="display" class="texto-calculadora">            
+
+            <div id="calculadora">           
+           
+            <button id="calculadora-icones" onclick="clearDisplay()"><img id="iconecalculadora" src="C.png" alt="Limpar"></button>
+
+            <button id="calculadora-icones" onclick="deleteLast()"><img id="iconecalculadora" src="back.png" alt="Apargar"></button>
+                       
+            <button id="calculadora-icones" onclick="appendToDisplay(`(`)"><img id="iconecalculadora" src="(.png" alt="("></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay(')')"><img id="iconecalculadora" src=").png" alt=")"></button>
+        </div>
+
+        <div id="calculadora">           
+
+            <button id="calculadora-icones" onclick="appendToDisplay('1')"><img id="iconecalculadora" src="1.png" alt="1"></button>
+           
+            <button id="calculadora-icones" onclick="appendToDisplay('2')"><img id="iconecalculadora" src="2.png" alt="2"></button>            
+                       
+            <button id="calculadora-icones" onclick="appendToDisplay('3')"><img id="iconecalculadora" src="3.png" alt="3"></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('*')"><img id="iconecalculadora" src="x.png" alt="x"></button>
+        </div>
+
+        <div id="calculadora">           
+           
+            <button id="calculadora-icones" onclick="appendToDisplay('4')"><img id="iconecalculadora" src="4.png" alt="4"></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('5')"><img id="iconecalculadora" src="5.png" alt="5"></button>
+                       
+            <button id="calculadora-icones" onclick="appendToDisplay('6')"><img id="iconecalculadora" src="6.png" alt="6"></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('/')"><img id="iconecalculadora" src="÷.png" alt="÷"></button>
+        </div>
+
+        <div id="calculadora">           
+           
+            <button id="calculadora-icones" onclick="appendToDisplay('7')"><img id="iconecalculadora" src="7.png" alt="7"></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('8')"><img id="iconecalculadora" src="8.png" alt="8"></button>
+                       
+            <button id="calculadora-icones" onclick="appendToDisplay('9')"><img id="iconecalculadora" src="9.png" alt="9"></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('+')"><img id="iconecalculadora" src="+.png" alt="+"></button>
+        </div>
+
+        <div id="calculadora">           
+           
+            <button id="calculadora-icones" onclick="appendToDisplay('.')"><img id="iconecalculadora" src="ponto.png" alt="ponto"></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('0')"><img id="iconecalculadora" src="0.png" alt="0"></button>
+                       
+            <button id="calculadora-icones" onclick="calculate()"><img id="iconecalculadora" src="=.png" alt="="></button>
+
+            <button id="calculadora-icones" onclick="appendToDisplay('-')"><img id="iconecalculadora" src="-.png" alt="-"></button>
+        </div>
+        
         </section>
 
         <footer><!--Botões de navegação-->
@@ -38,7 +94,10 @@
         </footer>
 
     </main>
-<script src="script.js"></script>
+<script src="script.js">
+</script>
+<script src="script-calculadora.js">
+</script>
 </body>
 
 </html>

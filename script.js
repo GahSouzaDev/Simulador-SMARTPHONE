@@ -48,7 +48,8 @@ function desenvolvimento() {
 async function virar() {
     currentFacingMode = currentFacingMode === 'user' ? 'environment' : 'user'; // Alterna entre frontal e traseira
     const videoElement = document.getElementById('appcamera');
-    await iniciarCamera(videoElement); // Reinicia a câmera com o novo facingMode
+    await iniciarCamera(videoElement); // Reinicia a câmera com o novo facingMode   
+    videoElement.style.transform = isFrontCamera ? 'scaleX(-1)' : 'scaleX(1)';
 }
 
 function capturar() {
@@ -58,7 +59,18 @@ function capturar() {
         canvas.width = videoElement.videoWidth;
         canvas.height = videoElement.videoHeight;
         const context = canvas.getContext('2d');
-        context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+
+        // Aplica a transformação ao contexto do canvas para corresponder à configuração da câmera
+        if (currentFacingMode === 'environmet') {
+            // Ajuste para a câmera frontal
+            context.save(); // Salva o estado atual do contexto
+            context.scale(-1, 1); // Inverte horizontalmente
+            context.drawImage(videoElement, -canvas.width, 0, canvas.width, canvas.height);
+            context.restore(); // Restaura o estado original do contexto
+        } else {
+            // Ajuste para a câmera traseira
+            context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+        }
 
         const dataURL = canvas.toDataURL('image/png');
         localStorage.setItem('capturedPhoto', dataURL);

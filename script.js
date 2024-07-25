@@ -28,6 +28,10 @@ function calculadora() {
     window.location.assign('app-calculadora.html');
 }
 
+function desenvolvimento() {
+    window.location.assign('app-em-desenvolvimento.html');
+}
+
 function capturar() {
     const videoElement = document.getElementById('appcamera');
     if (videoElement) {
@@ -88,7 +92,7 @@ function voltar() {
 
     if (notifica.style.top === '0%') {
         notifica.style.top = '-100%';
-    } else if (currentPath.endsWith('app-calculadora.html') || currentPath.endsWith('app-camera.html') || currentPath.endsWith('app-gravador.html')) {
+    } else if (currentPath.endsWith('app-calculadora.html') || currentPath.endsWith('app-camera.html') || currentPath.endsWith('app-gravador.html') || currentPath.endsWith('app-em-desenvolvimento.html')) {
         window.location.assign('index.html');
     } else if (currentPath.endsWith('reproduzir.html')) {
         window.location.assign('app-gravador.html');

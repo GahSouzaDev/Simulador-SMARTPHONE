@@ -331,6 +331,8 @@ button:disabled
     padding-right: 20px; /* Espaço entre o texto e a borda direita */
     box-sizing: border-box;     
     font-weight: 800;
+    margin-left: -5px;
+    
   }  
   .texto-calculadora
   {
@@ -346,6 +348,7 @@ button:disabled
       display: flex;    
       align-items: center;        
       gap: 45px;
+      
   }/*Configura propriedades dos icones*/
   #calculadora-icones
   {

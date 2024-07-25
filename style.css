@@ -141,14 +141,6 @@ section
 
 /*-------------------------APP-------------------------*/
 
-/*------------------------CALCULADORA-------------------------*/
-#appcaculadora
-{
-    position: relative;
-    z-index: 20;
-    text-align: center;    
-    font-size: 30px;
-}
 
 /*-----------------------CAMERA------------------------*/
 #appcamera
@@ -312,6 +304,67 @@ button:disabled
 {
     width: 65px; /* Manter o tamanho durante o hover */
 }
+
+/*-------------------------CALCULADORA-------------------------*/
+#appcalculadora
+{
+    z-index: -1;
+    background-image:url(imagem.jpg);   
+    background-size: cover;
+    margin-left: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 655px;    
+    width: 380px;              
+  }  
+  #display 
+  {
+    background-image: url('frame.png');
+    background-size: contain;
+    width: 100%;
+    height: 73px;
+    margin-bottom: 40px;        
+    padding: 10px;
+    margin-top: 70px;
+    margin-left: -5px; 
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    padding-right: 20px; /* Espaço entre o texto e a borda direita */
+    box-sizing: border-box;     
+    font-weight: 800;
+  }  
+  .texto-calculadora
+  {
+    color: white; 
+    text-align: right;   
+    font-size: 30px; 
+  }
+  
+  #calculadora/*Configura tamanho e posição dos icones na pagina inicial*/
+  {    
+      margin: 10px;
+      padding: 10px;    
+      display: flex;    
+      align-items: center;        
+      gap: 45px;
+  }/*Configura propriedades dos icones*/
+  #calculadora-icones
+  {
+     width: 50px;
+     height: 50px;      
+     border-radius: 30%;   
+     background-color: transparent;    
+     display: flex;
+     flex-direction: column;
+     align-items: center; /* Centraliza o conteúdo dentro do contêiner */
+     text-align: center; /* Centraliza o texto */
+     color: rgb(255, 255, 255);
+     border: none;
+  }/*COnfigura animação nos icones*/
+  #calculadora-icones:hover
+  {
+      transform: scale(1.1);   
+      transition: transform 0.2s;
+  }
 
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/

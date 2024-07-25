@@ -19,8 +19,21 @@ function notificacoes() {
     const notifica = document.getElementById('notifica');
     if (notifica.style.top === '0%') {
         notifica.style.top = '-100%';
+        
     } else {
         notifica.style.top = '0%';
+        configura.style.bottom = '-1700%';
+    }
+}
+function configuracoes()
+{
+    const configura = document.getElementById('configura');
+    if (configura.style.bottom === '0%') {
+        configura.style.bottom = '-1700%';
+        
+    } else {
+        configura.style.bottom = '0%';
+        notifica.style.top = '-100%';
     }
 }
 
@@ -88,11 +101,18 @@ function inicio() {
 
 function voltar() {
     const notifica = document.getElementById('notifica');
+    const configura = document.getElementById('configura'); // Corrigido aqui
     const currentPath = window.location.pathname;
 
+    // Verifica o estado atual de 'notifica' e 'configura' e altera a posição com base nisso
     if (notifica.style.top === '0%') {
         notifica.style.top = '-100%';
-    } else if (currentPath.endsWith('app-calculadora.html') || currentPath.endsWith('app-camera.html') || currentPath.endsWith('app-gravador.html') || currentPath.endsWith('app-em-desenvolvimento.html')) {
+    } else if (configura.style.bottom === '0%') {
+        configura.style.bottom = '-1700%';
+    } else if (currentPath.endsWith('app-calculadora.html') || 
+               currentPath.endsWith('app-camera.html') || 
+               currentPath.endsWith('app-gravador.html') || 
+               currentPath.endsWith('app-em-desenvolvimento.html')) {
         window.location.assign('index.html');
     } else if (currentPath.endsWith('reproduzir.html')) {
         window.location.assign('app-gravador.html');
@@ -100,6 +120,7 @@ function voltar() {
         window.location.assign('app-camera.html');
     }
 }
+
 
 // Função para carregar a gravação na página de reprodução
 document.addEventListener('DOMContentLoaded', () => {

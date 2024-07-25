@@ -96,6 +96,24 @@ section
     width: 380px;    
     z-index: 100;   
 }
+#configura
+{
+    position: absolute;
+    bottom: -1700%;
+    left: auto;      
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;     
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.6s ease-in-out;    
+    margin-top: 40px;
+    margin-left: -10px;
+    margin-bottom: 45px;
+    height: 655px;    
+    width: 380px;    
+    z-index: 100;  
+    text-align: center;
+}
 #widthhora/*Configura width de hora*/
 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

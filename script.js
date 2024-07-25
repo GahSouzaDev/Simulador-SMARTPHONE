@@ -45,6 +45,12 @@ function desenvolvimento() {
     window.location.assign('app-em-desenvolvimento.html');
 }
 
+async function virar() {
+    currentFacingMode = currentFacingMode === 'user' ? 'environment' : 'user'; // Alterna entre frontal e traseira
+    const videoElement = document.getElementById('appcamera');
+    await iniciarCamera(videoElement); // Reinicia a câmera com o novo facingMode
+}
+
 function capturar() {
     const videoElement = document.getElementById('appcamera');
     if (videoElement) {

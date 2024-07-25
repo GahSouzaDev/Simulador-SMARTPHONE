@@ -29,19 +29,28 @@
         <section id="camera"><!--Corpo do dispositivo-->             
             <video id="appcamera" autoplay></video>
             <button id="capture-button" onclick="capturar()"><img src="capturar.png" alt="Botão de capturar" id="capture-button"></button>     
+            <button id="virar-camera" onclick="virar()"><img src="virar.png" alt="Botão de capturar" id="flip-button"></button>  
             <script>
-                 document.addEventListener('DOMContentLoaded', async () => {
-            const videoElement = document.getElementById('appcamera');
-            
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                if (videoElement) {
-                    videoElement.srcObject = stream;
-                }
-            } catch (error) {
-                console.error('Erro ao acessar a câmera: ', error);
-            }
-        });
+                 let currentStream = null;
+let currentFacingMode = 'user'; // 'user' para a câmera frontal, 'environment' para a câmera traseira
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const videoElement = document.getElementById('appcamera');
+    await iniciarCamera(videoElement);
+});
+
+async function iniciarCamera(videoElement) {
+    try {
+        if (currentStream) {
+            currentStream.getTracks().forEach(track => track.stop()); // Parar todos os rastreadores da corrente atual
+        }
+        currentStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: currentFacingMode } });
+        videoElement.srcObject = currentStream;
+    } catch (error) {
+        console.error('Erro ao acessar a câmera: ', error);
+    }
+}
+
             </script>                 
         </section>               
 

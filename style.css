@@ -117,7 +117,7 @@ section
 #icones1/*Configura tamanho e posição dos icones na pagina inicial*/
 {    
     margin: 10px;
-    padding: 25px;    
+    padding: 23px;    
     display: flex;    
     align-items: center;        
     gap: 45px;

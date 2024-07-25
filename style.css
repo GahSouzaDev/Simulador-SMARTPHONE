@@ -104,6 +104,7 @@ section
     text-align: center;   
     justify-content: center; 
     display: flex;
+    margin-left: -10px;
 }
 #widthdata/*Configura o width de data*/
 {    
@@ -111,11 +112,12 @@ section
     font-size: 16px;
     text-align: center;   
     padding-bottom: 50px; 
+    margin-left: -10px;
 }
 #icones1/*Configura tamanho e posição dos icones na pagina inicial*/
 {    
     margin: 10px;
-    padding: 30px;    
+    padding: 28px;    
     display: flex;    
     align-items: center;        
     gap: 45px;

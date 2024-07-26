@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const brightnessRange = document.getElementById('brightness-range');
     const brightnessOverlay = document.getElementById('brightness-overlay');
     const invertToggle = document.getElementById('invert-toggle');
+    const resetArea = document.getElementById('reset-area'); // Área para detectar o gesto de tocar e arrastar para baixo
 
     // Recupera o valor do brilho e o estado de inversão dos cookies
     const savedBrightness = getCookie('brightness');
@@ -68,4 +69,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Aplica o papel de parede salvo
     applyWallpaper();
+
+    // Função para resetar as configurações com movimento para baixo
+    function resetSettings() {
+        // Reset brightness
+        brightnessRange.value = 100;
+        brightnessOverlay.style.opacity = (100 - 100) / 100; // Totalmente visível
+        setCookie('brightness', 100, 7);
+
+        // Reset invert colors
+        invertToggle.checked = false;
+        document.body.classList.remove('invert-colors');
+        setCookie('invert', false, 7);
+
+        // Remove papel de parede
+        setCookie('wallpaper', '', 365); // Remove o cookie do papel de parede
+        document.querySelector('section').style.backgroundImage = ''; // Remove o fundo
+    }
+
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    resetArea.addEventListener('touchstart', (e) => {
+        startY = e.touches[0].clientY;
+        isDragging = true;
+    });
+
+    resetArea.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentY = e.touches[0].clientY;
+        const diffY = currentY - startY;
+
+        if (diffY > 50) { // Movimento para baixo maior que 50px
+            // Mostra feedback visual, se necessário
+        }
+    });
+
+    resetArea.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const diffY = currentY - startY;
+
+        if (diffY > 50) { // Movimento para baixo maior que 50px
+            resetSettings(); // Reseta configurações
+        }
+    });
 });

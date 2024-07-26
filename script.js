@@ -15,16 +15,7 @@ window.document.getElementById('widthdata').textContent = `${dia} / ${mes} / ${a
 setInterval(updateClock, 1000);//Atualiza o relogio a cada 1000 milisegundos
 updateClock();//Atualiza a hora assim que a pagina é carregada
 
-function notificacoes() {
-    const notifica = document.getElementById('notifica');
-    if (notifica.style.top === '0%') {
-        notifica.style.top = '-100%';
-        
-    } else {
-        notifica.style.top = '0%';
-        configura.style.bottom = '-1700%';
-    }
-}
+
 function configuracoes()
 {
     const configura = document.getElementById('configura');

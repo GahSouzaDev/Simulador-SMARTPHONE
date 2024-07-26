@@ -146,7 +146,7 @@ section
 #brightness-control 
 {     
     padding: 10px;
-    width: 360px;
+    width: 90%;
 }
 
 /* Estilo do interruptor */
@@ -159,7 +159,7 @@ section
     top: 120px;         
     background: rgba(166, 163, 163, 0.427);   
     border-radius: 5px;
-    width: 360px;
+    width: 85%;
     padding: 20px;   
     text-align: center; /* Alinha o texto no centro do container */   
 }

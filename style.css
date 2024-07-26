@@ -534,6 +534,7 @@ button:disabled
     font-size: 25px;
 }
 #config1 {
+    margin-left: 1px;
     display: inline;    
     margin-top: 20px;     
     background: rgba(166, 163, 163, 0.427);   

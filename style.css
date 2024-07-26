@@ -144,6 +144,7 @@ section
 /* Estilo do controle de brilho */
 #brightness-control {
     margin: 20px;    
+    margin-left: 5px;
 }
 
 /* Estilo do interruptor */
@@ -158,7 +159,8 @@ section
     background: rgba(166, 163, 163, 0.427);
     padding: 20px;
     border-radius: 5px;
-    width: 80%;
+    width: 84%;
+    margin-left: 5px;
     text-align: center; /* Alinha o texto no centro do container */   
 }
 

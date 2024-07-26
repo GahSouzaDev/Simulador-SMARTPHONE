@@ -325,7 +325,11 @@ section
     width: 65px;   
       
 }
-
+#flip-button:hover
+{
+    width: 41px;   
+      
+}
 #fullscreen-photo 
 {        
     display: flex;

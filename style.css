@@ -316,7 +316,7 @@ section
     border-radius: 50%;
     padding: 10px 20px;
     cursor: pointer;
-    z-index: 9; /* Certifique-se de que o botão esteja acima do vídeo */
+    z-index: 11; /* Certifique-se de que o botão esteja acima do vídeo */
     background-color: transparent;
     width: 40px;
 }

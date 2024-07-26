@@ -36,7 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const brightnessRange = document.getElementById('brightness-range');
     const brightnessOverlay = document.getElementById('brightness-overlay');
     const invertToggle = document.getElementById('invert-toggle');
-    const resetArea = document.getElementById('reset-area'); // Área para detectar o gesto de tocar e arrastar para baixo
+    const configura = document.getElementById('configura');
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
 
     // Recupera o valor do brilho e o estado de inversão dos cookies
     const savedBrightness = getCookie('brightness');
@@ -70,50 +73,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Aplica o papel de parede salvo
     applyWallpaper();
 
-    // Função para resetar as configurações com movimento para baixo
-    function resetSettings() {
-        // Reset brightness
-        brightnessRange.value = 100;
-        brightnessOverlay.style.opacity = (100 - 100) / 100; // Totalmente visível
-        setCookie('brightness', 100, 7);
-
-        // Reset invert colors
-        invertToggle.checked = false;
-        document.body.classList.remove('invert-colors');
-        setCookie('invert', false, 7);
-
-        // Remove papel de parede
-        setCookie('wallpaper', '', 365); // Remove o cookie do papel de parede
-        document.querySelector('section').style.backgroundImage = ''; // Remove o fundo
+    // Função para mostrar ou esconder a configuração
+    function configuracoes() {
+        if (configura.style.bottom === '0%') {
+            configura.style.bottom = '-1700%';
+        } else {
+            configura.style.bottom = '0%';
+            document.getElementById('notifica').style.top = '-100%';
+        }
     }
 
-    let startY = 0;
-    let currentY = 0;
-    let isDragging = false;
+    document.getElementById('configuracao').addEventListener('click', configuracoes);
 
-    resetArea.addEventListener('touchstart', (e) => {
+    configura.addEventListener('touchstart', (e) => {
         startY = e.touches[0].clientY;
         isDragging = true;
     });
 
-    resetArea.addEventListener('touchmove', (e) => {
+    configura.addEventListener('touchmove', (e) => {
         if (!isDragging) return;
         currentY = e.touches[0].clientY;
         const diffY = currentY - startY;
 
-        if (diffY > 50) { // Movimento para baixo maior que 50px
-            // Mostra feedback visual, se necessário
+        if (diffY > 0) {
+            configura.style.bottom = `${-1700 + diffY}px`;
         }
     });
 
-    resetArea.addEventListener('touchend', () => {
+    configura.addEventListener('touchend', (e) => {
         if (!isDragging) return;
         isDragging = false;
-
         const diffY = currentY - startY;
 
-        if (diffY > 50) { // Movimento para baixo maior que 50px
-            resetSettings(); // Reseta configurações
+        if (diffY > 50) {
+            // Se arrastou para baixo mais de 50px, esconder configurações
+            configura.style.bottom = '-1700%';
+        } else {
+            // Voltar para a posição original
+            configura.style.bottom = '0';
         }
     });
 });

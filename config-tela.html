@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configurações</title>
+    <title>COnfigurações de TELA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -26,43 +26,25 @@
             </div>                        
         </header>
 
-        <section id="appconfiguracao"><!--Corpo do dispositivo-->
-            <div id="textconfig">Configurações</div>
-    
-                <button class="sobreprojeto" id="config1" onclick="startAnimationAndRedirect(this, 'app-em-desenvolvimento.html')">
-                    <div>Sobre o projeto</div>
-                </button>
-                <button class="tela" id="config1" onclick="startAnimationAndRedirect(this, 'config-tela.html')">
-                    <div>Tela</div>
-                </button>
-                <button class="senha" id="config1" onclick="startAnimationAndRedirect(this, 'app-em-desenvolvimento.html')">
-                    <div>Senhas e segurança</div>
-                </button>
-                <button class="github" id="config1" onclick="startAnimationAndRedirect(this, 'app-em-desenvolvimento.html')">
-                    <div>GITHUB <span id="config2">Conheça mais projetos</span></div>
-                </button>
-                <p id="creditos">Site desenvolvido por Emerson Souza.<br></p>
-                
-                <script>
-                    function startAnimationAndRedirect(element, url) {
-                        // Adiciona a classe 'active' ao botão clicado
-                        element.classList.add('active');
-                        
-                        // Remove a classe 'active' e adiciona 'not-active' após o tempo de animação
-                        setTimeout(function() {
-                            element.classList.remove('active');
-                            element.classList.add('not-active');
-                            
-                            // Remove a classe 'not-active' e faz o redirecionamento após o atraso
-                            setTimeout(function() {
-                                element.classList.remove('not-active');
-                                window.location.href = url;
-                            }, 0); // Tempo da animação de retorno (0.5s)
-                            
-                        }, 300); // Tempo da animação 'active' (0.5s)
-                    }
-                </script>
-            </section>
+        <section id="appconfigtela"><!--Corpo do dispositivo-->
+            <div id="configtela1">
+                <div id="brightness-overlay"></div>
+
+    <div id="brightness-control">
+        <label for="brightness-range">Brilho:</label>
+        <input type="range" id="brightness-range" min="25" max="100" value="100">
+    </div>
+    <div class="toggle-container">
+        <div class="toggle-switch">
+            <input type="checkbox" id="invert-toggle" onclick="toggleInvertColors()">
+            <label for="invert-toggle" class="switch-label">
+                <span class="switch-button"></span><span class="switch-text">Modo: Inversão de cores</span>
+            </label>
+        </div>
+        
+    </div>
+            </div>
+        </section>
 
         <footer><!--Botões de navegação-->
             <div id="configura"><!--Conteudo da barra de notificações-->                

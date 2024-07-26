@@ -144,7 +144,7 @@ section
 /* Estilo do controle de brilho */
 #brightness-control {
     margin: 20px;    
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 /* Estilo do interruptor */
@@ -160,7 +160,7 @@ section
     padding: 20px;
     border-radius: 5px;
     width: 83%;
-    margin-left: 5px;
+    margin-left: 4px;
     text-align: center; /* Alinha o texto no centro do container */   
 }
 
@@ -311,8 +311,7 @@ section
     left: 20%;
     justify-content: center; /* Alinha os botões horizontalmente ao centro */
     gap: 10px; /* Espaço entre os botões */      
-    transform: translateX(-50%);        
-    border: none;
+    transform: translateX(-50%);     
     border-radius: 50%;
     padding: 10px 20px;
     cursor: pointer;

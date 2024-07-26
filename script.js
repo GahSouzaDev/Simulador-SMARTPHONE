@@ -118,7 +118,6 @@ function appconfiguracoes() {
     window.location.assign('app-configuracao.html');
 }
 
-
 function inicio() {
     window.location.assign('index.html');
 }
@@ -133,12 +132,13 @@ function voltar() {
         notifica.style.top = '-100%';
     } else if (configura.style.bottom === '0%') {
         configura.style.bottom = '-1700%';
-    }
-   
-     else if (currentPath.endsWith('app-calculadora.html') || 
+    } else if (currentPath.endsWith('config-tela.html')) {
+        window.location.assign('app-configuracao.html');
+    } else if (currentPath.endsWith('app-configuracao.html')) {
+        window.location.assign('index.html');
+    } else if (currentPath.endsWith('app-calculadora.html') || 
                currentPath.endsWith('app-camera.html') || 
                currentPath.endsWith('app-gravador.html') || 
-               currentPath.endsWith('app-configuracao.html') ||
                currentPath.endsWith('app-em-desenvolvimento.html')) {
         window.location.assign('index.html');
     } else if (currentPath.endsWith('reproduzir.html')) {
@@ -146,12 +146,6 @@ function voltar() {
     } else if (currentPath.endsWith('foto.html')) {
         window.location.assign('app-camera.html');
     }
-    else if (currentPath.endsWith('config-tela.html') || 
-    currentPath.endsWith('') || 
-    currentPath.endsWith('') || 
-    currentPath.endsWith('')) {
-window.location.assign('app-configuracao.html');
-}
 }
 
 

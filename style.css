@@ -79,7 +79,7 @@ header
 section
 {    
     z-index: -1;
-    background-image:url(imagem8.png);   
+    background-image:url(imagem1.jpg);   
     background-size: cover;
     margin-left: -10px;
     margin-top: 10px;
@@ -558,7 +558,7 @@ button:disabled
 #config1.active 
 {
     transform: scale(19); /* Aplica a transformação */
-    transition: transform 0.6s ease; /* Sem atraso na transição ao pressionar */
+    transition: transform 0.5s ease; /* Sem atraso na transição ao pressionar */
 }
 
 #config1.not-active 

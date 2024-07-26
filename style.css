@@ -109,7 +109,7 @@ section
     position: absolute;
     bottom: -1700%;
     left: auto;      
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.936);
     color: white;     
     justify-content: center;
     align-items: center;
@@ -146,7 +146,7 @@ section
 #brightness-control 
 {     
     padding: 10px;
-    width: 90%;
+    width: 360px;
 }
 
 /* Estilo do interruptor */
@@ -159,7 +159,7 @@ section
     top: 120px;         
     background: rgba(166, 163, 163, 0.427);   
     border-radius: 5px;
-    width: 85%;
+    width: 360px;
     padding: 20px;   
     text-align: center; /* Alinha o texto no centro do container */   
 }

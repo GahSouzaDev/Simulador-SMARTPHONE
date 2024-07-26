@@ -94,6 +94,22 @@
         <label for="brightness-range">Brilho:</label>
         <input type="range" id="brightness-range" min="25" max="100" value="100">
     </div>
+    <div class="toggle-container">
+        <div class="toggle-switch">
+            <input type="checkbox" id="invert-toggle" onclick="toggleInvertColors()">
+            <label for="invert-toggle" class="switch-label">
+                <span class="switch-button"></span>
+            </label>
+        </div>
+        <span class="switch-text">Modo: Inversão de cores</span>
+    </div>
+    <script>
+        function toggleInvertColors() {
+            const body = document.body;
+            const toggle = document.getElementById('invert-toggle');
+            body.classList.toggle('invert-colors', toggle.checked);
+        }
+    </script>
     <script src="script-configuracao.js"></script>
                 
         </div>

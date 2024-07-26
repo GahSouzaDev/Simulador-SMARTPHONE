@@ -44,7 +44,8 @@ header
     text-align:left;    
 }
 #notificacao/*Configurações da barra de notificações*/
-{      
+{   
+    position: fixed;
     background-color: rgba(0, 0, 0, 0);
     color: white;
     padding: 5px 20px;
@@ -52,14 +53,21 @@ header
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 40px;
+    margin-left: 90px;
     align-items: center;
     justify-content: center;
     height: 40px;
 }
-.fas.fa-wifi {/*Configurações do icone de sinal na barra de notificações*/
+#notification-icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Configurações do ícone de sinal na barra de notificações */
+.fas.fa-wifi, .fas.fa-video, .fas.fa-microphone {
     font-size: 18px;
-    color: #ffffff;   
+    color: #ffffff;
+    margin: 0 10px;
 }
 #intnotifica/*COnfigura lista de notificações*/
 {
@@ -133,6 +141,86 @@ section
     border-radius: 5px;
     z-index: 3; /* Certifique-se de que o controle esteja acima do overlay */
 }
+/* Estilo do controle de brilho */
+#brightness-control {
+    margin: 20px;    
+}
+
+/* Estilo do interruptor */
+.toggle-switch 
+{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    margin: 19px;
+    margin-top: -7px;         
+    background: rgba(166, 163, 163, 0.427);
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center; /* Alinha o texto no centro do container */   
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+}
+
+.switch-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+.switch-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+
+#invert-toggle {
+    display: none;
+}
+
+#invert-toggle:checked + .switch-label .switch-button {
+    background-color: #5900ff;
+}
+
+#invert-toggle:checked + .switch-label .switch-button::before {
+    transform: translateY(-50%) translateX(20px);
+}
+.switch-text {
+    margin-left: 50px; /* Ajuste o valor conforme necessário */
+    font-size: 14px;   
+    color: #ffffff; /* Ajuste a cor conforme necessário */
+}
+
+/* Inverter cores para o conteúdo, mas não para o vídeo */
+.invert-colors {
+    filter: invert(1);
+}
+
+#appcamera {
+    filter: invert(0); /* Garante que a câmera não seja afetada */
+}
 
 #widthhora/*Configura width de hora*/
 {
@@ -190,7 +278,7 @@ section
     width: auto;    
     border-radius: 10px;
     transform: scaleX(-1);
-    z-index: 10;    
+    z-index: 10;          
 }
 #camera
 {    
@@ -198,7 +286,7 @@ section
     justify-content: center;
     align-items: center;       
     height: 655px;    
-    width: 380px;  
+    width: 380px;          
 }
 #capture-button/*Botão de captura da camera*/
 {

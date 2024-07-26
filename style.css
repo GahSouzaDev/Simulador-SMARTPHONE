@@ -79,7 +79,7 @@ header
 section
 {    
     z-index: -1;
-    background-image:url(imagem.jpg);   
+    background-image:url(imagem8.png);   
     background-size: cover;
     margin-left: -10px;
     margin-top: 10px;
@@ -537,7 +537,7 @@ button:disabled
     margin-left: -5px;
     display: inline;    
     margin-top: 20px;     
-    background: rgba(166, 163, 163, 0.427);   
+    background: rgba(0, 0, 0, 0.754);   
     border-radius: 5px;
     z-index: 60; /* Certifique-se de que o controle esteja acima do overlay */
     width: 98%;
@@ -595,7 +595,7 @@ button:disabled
 #configtela1
 {  
     display: flex;           
-    background: rgba(166, 163, 163, 0.427);   
+    background: rgba(0, 0, 0, 0.648);   
     border-radius: 5px;
     z-index: 60; /* Certifique-se de que o controle esteja acima do overlay */
     width: 100%;
@@ -604,13 +604,17 @@ button:disabled
     color: white;      
     font-size: 18px;           
 }
-#configtela1>#brightness-control 
-{    
-    margin-left: 7px;    
+#configtela1>#brightness-control {
+    margin-left: 9px;
+    display: flex;
+     /* Alinha itens em coluna */
+    justify-content: center; /* Alinha itens verticalmente ao centro */
+    align-items: center; /* Alinha itens horizontalmente ao centro */
+    
 }
 #configtela1>.toggle-container
 {
-    margin-left: 7px;
+    margin-left: 9px;    
 }
 #wallpaper
 {
@@ -641,7 +645,7 @@ button:disabled
 }
 #protecao-de-tela img {
     max-width: 100px; /* Largura máxima das fotos */
-    height: auto; /* Mantém a proporção das fotos */
+    height: 200px; /* Mantém a proporção das fotos */
     border-radius: 8px; /* Adiciona bordas arredondadas (opcional) */
     opacity: 100%;
     transition: opacity 0.3s ease;

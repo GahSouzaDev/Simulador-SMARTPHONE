@@ -459,10 +459,7 @@ button:disabled
 
 /*-------------------------CALCULADORA-------------------------*/
 #appcalculadora
-{
-    z-index: -1;
-    background-image:url(imagem.jpg);   
-    background-size: cover;
+{    
     margin-left: -10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -521,6 +518,69 @@ button:disabled
       transition: transform 0.2s;
   }
 
+/*------------------------CONFIGURAÇÃO------------------------*/
+#appconfiguracao
+{
+    margin-left: -10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 655px;    
+    width: 380px;   
+}
+#textconfig
+{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+#config1 {
+    display: inline;    
+    margin-top: 20px;     
+    background: rgba(166, 163, 163, 0.427);   
+    border-radius: 5px;
+    z-index: 60; /* Certifique-se de que o controle esteja acima do overlay */
+    width: 98%;
+    border-radius: 5px;
+    padding: 25px;
+    color: white;
+    text-align: left;    
+    transform: scale(0.95);       
+    transition: transform 0.5s ease; 
+    font-size: 18px;
+}
+
+#config1:hover {
+    transform: scale(1.1, 1.1); /* Leve aumento ao passar o mouse */
+    transition: transform 0.5s ease; /* Transição sem atraso */
+}
+
+#config1.active {
+    transform: scale(25); /* Aplica a transformação */
+    transition: transform 0.5s ease; /* Sem atraso na transição ao pressionar */
+}
+
+#config1.not-active {
+    transform: scale(1, 1); /* Retorna ao estado original */
+    transition: transform 0.1s ease 0.1s; /* Adiciona um atraso ao retornar ao estado original */
+}
+
+#config2
+{
+    color: #d1d1d1;
+    padding-left: 20px;
+    
+}
+#creditos
+{   
+    position: absolute;
+    padding-top: 200px;
+    font-size: 18px;
+    text-align: center;
+    bottom: 80px;
+    left: 20px;
+    color: #989898;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/
 {

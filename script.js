@@ -112,6 +112,13 @@ function github() {
     window.open('https://github.com/GahSouzaDev', '_blank');
 }
 
+function calendario() {
+    window.location.assign('app-calendario.html');
+}
+function dispertador() {
+    window.location.assign('app-dispertador.html');
+}
+
 function inicio() {
     window.location.assign('index.html');
 }
@@ -133,7 +140,11 @@ function voltar() {
     } else if (currentPath.endsWith('app-calculadora.html') || 
                currentPath.endsWith('app-camera.html') || 
                currentPath.endsWith('app-gravador.html') || 
-               currentPath.endsWith('app-em-desenvolvimento.html')) {
+               currentPath.endsWith('app-em-desenvolvimento.html')
+               || 
+               currentPath.endsWith('app-calendario.html')
+               || 
+               currentPath.endsWith('app-dispertador.html')) {
         window.location.assign('index.html');
     } else if (currentPath.endsWith('reproduzir.html')) {
         window.location.assign('app-gravador.html');

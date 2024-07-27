@@ -695,7 +695,7 @@ main#calendario-cor {
   {
     display: flex;
     justify-content: space-between;
-    width: 99%;
+    width: 100%;
     position: absolute;
     bottom: 100px;
     left: -10px;

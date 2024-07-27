@@ -697,6 +697,7 @@ main#calendario-cor {
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin-left: -10px;
   }
   
   #backButton/*appcalculadora button*/ {
@@ -741,37 +742,42 @@ main#calendario-cor {
   
 
   #appcalendario1 {
-    width: 100%;
+    width: 95%;
     height: auto;
     margin-top: 30px;
-    text-align: center;
+    margin-left: -5px;
+    text-align: center;    
+    
   }
   
   #weekdays {
     margin-top: 60px;
-    width: 100%;
+    width: 95%;
     display: flex;
     color: var(--color-weekdays);
+    margin-left: -5px;
+    
   }
   
   #weekdays div {
-    width: 33px;
+    width: 30px;
     padding: 10px;
     font-size: 12px;
     text-align: center;
   }
   
   #calendar {
-    width: 100%;
+    width: 95%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    margin-left: -1px;
   }
   
-  .day {
-    width: 40px;
+  .day {   
+    width: 35px;
     padding: 10px;
-    height: 40px;
+    height: 45px;
     cursor: pointer;
     box-sizing: border-box;
     background-color: var(--color-day);
@@ -804,7 +810,9 @@ main#calendario-cor {
     color: white;
     border-radius: 5px;
     max-height: 55px;
+    margin-left: -1px;
     overflow: hidden;
+    
   }
   
   .padding 
@@ -828,6 +836,7 @@ main#calendario-cor {
     border-radius: 5px;        
     position: absolute;
     font-family: sans-serif;    
+    margin-left: -5px;
   }
   
   #eventTitleInput {

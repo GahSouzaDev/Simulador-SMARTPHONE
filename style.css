@@ -752,7 +752,7 @@ main#calendario-cor {
   
   #weekdays {
     margin-top: 60px;
-    width: 95%;
+    width: 100%;
     display: flex;
     color: var(--color-weekdays);
     margin-left: -5px;
@@ -767,7 +767,7 @@ main#calendario-cor {
   }
   
   #calendar {
-    width: 95%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -775,7 +775,7 @@ main#calendario-cor {
   }
   
   .day {   
-    width: 35px;
+    width: 36px;
     padding: 10px;
     height: 45px;
     cursor: pointer;

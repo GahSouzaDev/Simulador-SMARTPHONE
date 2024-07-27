@@ -693,10 +693,13 @@ main#calendario-cor {
   }
   #botoes
   {
-    padding-top: 30px;
     display: flex;
-    gap: 10px;
-    justify-content: center;   
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    left: -10px;
+    padding: 10px; 
   }
   
   #backButton/*appcalculadora button*/ {
@@ -710,7 +713,8 @@ main#calendario-cor {
     border-radius: 5px;    
     background-color: var(--color-day);
     color: var(--color-weekdays);
-  }
+     }
+
   #nextButton/*appcalculadora button*/ {
     width: 150px;
     height: 50px;
@@ -724,7 +728,7 @@ main#calendario-cor {
     color: var(--color-weekdays);
   }
   #backButton:hover {
-    background-color: var(--hover);
+    background-color: var(--hover);    
   }
   #nextButton:hover {
     background-color: var(--hover);
@@ -770,8 +774,7 @@ main#calendario-cor {
     width: 100%;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;        
   }
   
   .day {   
@@ -863,7 +866,7 @@ main#calendario-cor {
   
   #saveButton, #closeButton {
     background-color: var(--header-button);
-    padding: 18px;
+    padding: 18px;    
     
   }
   #botoes1

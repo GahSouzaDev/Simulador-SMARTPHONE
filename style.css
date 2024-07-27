@@ -695,15 +695,15 @@ main#calendario-cor {
   {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 99%;
     position: absolute;
     bottom: 100px;
     left: -10px;
-    padding: 10px; 
+    padding: 10px;     
   }
   
   #backButton/*appcalculadora button*/ {
-    width: 150px;
+    width: 180px;
     height: 50px;
     cursor: pointer;
     box-shadow: 0px 0px 2px rgb(0, 0, 0);
@@ -716,7 +716,7 @@ main#calendario-cor {
      }
 
   #nextButton/*appcalculadora button*/ {
-    width: 150px;
+    width: 180px;
     height: 50px;
     cursor: pointer;
     box-shadow: 0px 0px 2px rgb(0, 0, 0);

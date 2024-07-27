@@ -563,18 +563,7 @@ button:disabled
 }
 
 /* Estado ativo */
-#config1.active {
-    padding: 720px 15px; /* Reduz o padding quando o botão está ativo */
-    transition: padding 0.7s ease; /* Transição suave para o estado ativo */
 
-}
-
-/* Estado não ativo */
-#config1.not-active {
-   
-    padding: 10px 20px; /* Retorna ao padding original ou desejado */
-    transition: padding 0.1s ease 0.1s; /* Adiciona um atraso ao retornar ao estado original */
-}
 /* Estado não ativo */
 
 #config2

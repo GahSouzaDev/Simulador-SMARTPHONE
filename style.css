@@ -549,26 +549,37 @@ button:disabled
     transition: transform 0.5s ease; 
     font-size: 18px;
 }
-#config1:hover 
+#appconfiguracao i
 {
-    transform: scale(1.1, 1.1); /* Leve aumento ao passar o mouse */
-    transition: transform 0.5s ease; /* Transição sem atraso */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#config1:hover {
+    margin-left: 2px;
+    transform: scale(1, 1); /* Leve aumento ao passar o mouse */
+    transition: transform 0.5s ease;
+    padding: 30px 15px; /* Ajuste o padding para criar o efeito de aumento */
+    transition: padding 0.5s ease; /* Transição suave para o aumento */
 }
 
-#config1.active 
-{
-    transform: scale(19); /* Aplica a transformação */
-    transition: transform 0.5s ease; /* Sem atraso na transição ao pressionar */
+/* Estado ativo */
+#config1.active {
+    padding: 720px 15px; /* Reduz o padding quando o botão está ativo */
+    transition: padding 0.7s ease; /* Transição suave para o estado ativo */
+
 }
 
-#config1.not-active 
-{
-    transform: scale(1, 1); /* Retorna ao estado original */
-    transition: transform 0.1s ease 0.1s; /* Adiciona um atraso ao retornar ao estado original */
+/* Estado não ativo */
+#config1.not-active {
+   
+    padding: 10px 20px; /* Retorna ao padding original ou desejado */
+    transition: padding 0.1s ease 0.1s; /* Adiciona um atraso ao retornar ao estado original */
 }
+/* Estado não ativo */
+
 #config2
 {
-    color: #d1d1d1;
+    color: #d8d8d8;
     padding-left: 20px;
     
 }
@@ -660,6 +671,7 @@ button:disabled
     pointer-events: none; /* Desabilita eventos de ponteiro */
     opacity: 0.3; /* Opcional: reduz a opacidade das imagens desativadas */
 }
+/*----------pagina de configurações | Sobre o projeto----------*/
 
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/

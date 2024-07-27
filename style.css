@@ -555,8 +555,8 @@ button:disabled
     margin-right: 10px;
 }
 #config1:hover {
-    margin-left: 2px;
-    transform: scale(1, 1); /* Leve aumento ao passar o mouse */
+    margin-left: 1px;
+    transform: scale(0.95, 0.95); /* Leve aumento ao passar o mouse */
     transition: transform 0.5s ease;
     padding: 30px 15px; /* Ajuste o padding para criar o efeito de aumento */
     transition: padding 0.5s ease; /* Transição suave para o aumento */

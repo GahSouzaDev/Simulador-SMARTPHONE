@@ -126,7 +126,7 @@ function voltar() {
         notifica.style.top = '-100%';
     } else if (configura.style.bottom === '0%') {
         configura.style.bottom = '-1700%';
-    } else if (currentPath.endsWith('config-tela.html') || currentPath.endsWith('config-sobre.html')) {
+    } else if (currentPath.endsWith('config-tela.html') || currentPath.endsWith('config-sobre.html') || currentPath.endsWith('config-senha.html')) {
         window.location.assign('app-configuracao.html');
     } else if (currentPath.endsWith('app-configuracao.html')) {
         window.location.assign('index.html');

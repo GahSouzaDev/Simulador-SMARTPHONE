@@ -662,6 +662,224 @@ button:disabled
 }
 /*----------pagina de configurações | Sobre o projeto----------*/
 
+/*-------------------------CALENDARIO-------------------------*/
+main#calendario-cor {
+    --body-color: #ffffff00;
+    --header-color: #ffffff;
+    --header-button: #ffffff;
+    --color-weekdays: #ffffff;
+    --box-shadow: #000000;
+    --hover: #000000;
+    --current-day: #ffffff8a;
+    --event-color: #f2ff00;
+    --modal-event: #000000d6;/*Cor da caixa de Novo evento*/
+    --color-day: rgba(0, 0, 0, 0.785);/*Cor fundo dos quadrados do calendraio*/
+    --holiday-color: red; /* Cor para os feriados */
+  }  
+  #appcalendario/*appcalendario*/ 
+  {
+    display: flex;   
+    justify-content: center;    
+    height: 655px;
+    width: 380px;    
+    z-index: 60;
+    padding-left: -10px;
+    margin-left: -10px;       
+  }
+  #monthDisplay
+  {
+    font-size: 40px;
+    text-transform: uppercase; 
+  }
+  #botoes
+  {
+    padding-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  #backButton/*appcalculadora button*/ {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;    
+    background-color: var(--color-day);
+    color: var(--color-weekdays);
+  }
+  #nextButton/*appcalculadora button*/ {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px; 
+    background-color: var(--color-day);   
+    color: var(--color-weekdays);
+  }
+  #backButton:hover {
+    background-color: var(--hover);
+  }
+  #nextButton:hover {
+    background-color: var(--hover);
+  }
+  
+  #appcalendario2 {
+    padding: 10px;
+    color: var(--header-color);
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  #appcalendario1 {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  #weekdays {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    color: var(--color-weekdays);
+  }
+  
+  #weekdays div {
+    width: 33px;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .day {
+    width: 40px;
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: var(--color-day);
+    margin: 5px 7px;
+    box-shadow: 0px 0px 3px var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15%;
+  }
+  
+  .day:hover {
+    background-color: var(--hover);
+  }
+  
+  .day + #currentDay {
+    background-color: var(--current-day);
+    color: black;
+  }
+  
+  .day.holiday {
+    background-color: var(--holiday-color); /* Cor de fundo para feriados */
+    color: white; /* Cor do texto para garantir legibilidade */
+  }
+  
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: var(--event-color);
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+  
+  .padding 
+  {
+    cursor: default !important;
+    background-color: var(--body-color) !important;
+    box-shadow: none !important;
+  }
+  
+  #newEventModal, #deleteEventModal 
+  {    
+    text-align: center;
+    top: 150px;
+    width: 280px;
+    height: 230px;
+    display: none;
+    z-index: 20;
+    padding: 30px;
+    background-color: var(--modal-event);
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
+    border-radius: 5px;        
+    position: absolute;
+    font-family: sans-serif;    
+  }
+  
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+    font-size: 20px;
+  }
+  
+  #eventTitleInput.error {
+
+    border: 2px solid red;
+  }
+  
+  #cancelButton, #deleteButton {
+    background-color: var(--header-color);
+    padding: 18px;
+  }
+  
+  #saveButton, #closeButton {
+    background-color: var(--header-button);
+    padding: 18px;
+    
+  }
+  #botoes1
+  {   
+    padding-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  #eventText {
+    font-size: 20px;
+  }
+  
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/
 {

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="calendario-cor">
 
         <header><!--Barra de notificações-->
             <i class="fas fa-wifi"></i>
@@ -26,8 +26,49 @@
             </div>                        
         </header>
 
-        <section id="appcaculadora"><!--Corpo do dispositivo-->
-            Calendario em desenvolvimento...
+        <section id="appcalendario"><!--Corpo do dispositivo-->
+            
+            <div id="appcalendario1">                
+                   
+                      <div id="monthDisplay"></div>
+                      <div id="botoes">
+                        <button id="backButton">Anterior</button>
+                        <button id="nextButton">Próximo</button>
+                      </div>
+                
+                    
+                    <div id="weekdays">
+                      <div>Domingo</div>
+                      <div>Segunda</div>
+                      <div>Terça</div>
+                      <div>Quarta</div>
+                      <div>Quinta</div>
+                      <div>Sexta</div>
+                      <div>Sábado</div>
+                    </div>
+                    <!-- div dinamic -->
+                    <div id="calendar" ></div>
+                
+                </div>
+                <div id="newEventModal">
+                  <h2>Novo evento</h2>
+                  <input id="eventTitleInput" placeholder="Novo evento"/>
+                  <div id="botoes1">
+                      <button id="saveButton"> Salvar</button>
+                      <button id="cancelButton">Cancelar</button>
+                  </div>
+                </div>
+                <div id="deleteEventModal">
+                  <h2>Evento</h2>
+                  <div id="eventText"></div><br>
+                  <div id="botoes1">
+                      <button id="deleteButton">Deletar</button>
+                      <button id="closeButton">Fechar</button>
+                  </div>
+                </div>
+                <div id="modalBackDrop"></div>
+            </div>
+          
         </section>
 
         <footer><!--Botões de navegação-->
@@ -56,6 +97,7 @@
         }
     </script>
     <script src="script-configuracao.js"></script>
+    <script src="script-calendario.js"></script>
                 
         </div>
         </div>

@@ -18,6 +18,17 @@ function getCookie(name) {
     return null;
 }
 
+// Função para salvar eventos no cookie
+function setEventsCookie(events) {
+    setCookie('events', JSON.stringify(events), 365); // Salva eventos nos cookies por 7 dias
+}
+
+// Função para obter eventos do cookie
+function getEventsCookie() {
+    const events = getCookie('events');
+    return events ? JSON.parse(events) : [];
+}
+
 // Função para definir o papel de parede
 function setWallpaper(imageUrl) {
     setCookie('wallpaper', imageUrl, 365);

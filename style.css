@@ -689,15 +689,14 @@ main#calendario-cor {
   #monthDisplay
   {
     font-size: 40px;
-    text-transform: uppercase; 
+    text-transform: uppercase;     
   }
   #botoes
   {
     padding-top: 30px;
     display: flex;
     gap: 10px;
-    justify-content: center;
-    margin-left: -10px;
+    justify-content: center;   
   }
   
   #backButton/*appcalculadora button*/ {
@@ -747,6 +746,7 @@ main#calendario-cor {
     margin-top: 30px;
     margin-left: -5px;
     text-align: center;    
+    margin-left: -10px;
     
   }
   
@@ -771,7 +771,7 @@ main#calendario-cor {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    margin-left: -1px;
+    
   }
   
   .day {   

@@ -118,17 +118,6 @@ function calendario() {
 function dispertador() {
     window.location.assign('app-dispertador.html');
 }
-function enviarNotificacao() {
-    if (Notification.permission === "granted") {
-        new Notification("Título da notificação", { body: "Corpo da notificação" });
-    } else if (Notification.permission !== "denied") {
-        Notification.requestPermission().then(function(permission) {
-            if (permission === "granted") {
-                new Notification("Título da notificação", { body: "Corpo da notificação" });
-            }
-        });
-    }
-}
 
 function inicio() {
     window.location.assign('index.html');

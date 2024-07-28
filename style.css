@@ -1054,7 +1054,7 @@ main#calendario-cor {
     cursor: pointer;
     margin-left: 30PX;
     margin-top: 30PX;
-    margin-left: 25px;
+    margin-left: 18px;
 }
 
 #btnSetAlarmDespertador:hover {
@@ -1093,19 +1093,20 @@ main#calendario-cor {
     justify-content: center;
     align-items: center;      
     font-family: Arial, sans-serif;
+    margin-left: -10PX;
 }
 .paginalarme1
 {
     text-align: center;
-    margin-left: -10PX;
+    
+    
 }
 .circle {
-    
+    margin-left: -10px;
     width: 250px;
     height: 155px;
     background-color: #ffffffc8;
-    border-radius: 50%;
-    margin: 20px auto;
+    border-radius: 50%;    
     animation: pulse 2s infinite;
     font-size: 45px;
     padding-top: 95px;
@@ -1116,7 +1117,7 @@ main#calendario-cor {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.5);
+        transform: scale(1.4);
     }
     100% {
         transform: scale(1);

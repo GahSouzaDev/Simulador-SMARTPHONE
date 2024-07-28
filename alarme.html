@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Despertador</title>
+    <title>Dispertador</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -26,30 +26,12 @@
             </div>                        
         </header>
 
-        <section id="despertador01"><!--Corpo do dispositivo-->
-            <div id="appdespertador">
-                <div class="despertador">
-                    <div class="alarmdespertador">
-                        <h1 id="hora-despertador">00:00:00</h1>
-                        <div class="frame-despertador">
-                            <div class="alarm-controls">
-                                <select>
-                                    <option value="Hour" selected disabled hidden> Horas </option>
-                                </select>
-                            </div>
-                            <div class="alarm-controls">
-                                <select>
-                                    <option value="Minute" selected disabled hidden> Minutos </option>
-                                </select>
-                            </div>
-                        </div>
-                       
-                    </div>
-                </div>
-                <ul id="alarmListDespertador"></ul>
-                <button id="btnSetAlarmDespertador">Ativar Alarme</button>
-            </div>
-        
+        <section id="paginaalarme"><!--Corpo do dispositivo-->
+            <div class="paginaalarme1">
+                <button onclick="inicio()">
+                    <div class="circle">DESLIGAR</div>               
+                                </div>
+                </button>
         </section>
 
         <footer><!--Botões de navegação-->
@@ -91,6 +73,8 @@
     </main>
 <script src="script.js"></script>
 <script src="script-notificacoes.js"></script>
+
+</script>
 </body>
 
 </html>

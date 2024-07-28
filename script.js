@@ -150,7 +150,11 @@ function voltar() {
                || 
                currentPath.endsWith('app-dispertador.html')) {
         window.location.assign('index.html');
-    } else if (currentPath.endsWith('reproduzir.html')) {
+       
+    } 
+    else if (currentPath.endsWith('alarme.html'))
+        { window.location.assign('app-dispertador.html')}
+    else if (currentPath.endsWith('reproduzir.html')) {
         window.location.assign('app-gravador.html');
     } else if (currentPath.endsWith('foto.html')) {
         window.location.assign('app-camera.html');

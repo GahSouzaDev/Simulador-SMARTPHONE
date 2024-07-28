@@ -1048,7 +1048,7 @@ main#calendario-cor {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 40PX;
+    margin-left: 30PX;
     margin-top: 30PX;
 }
 
@@ -1080,6 +1080,40 @@ main#calendario-cor {
 
 #alarmListDespertador li button:hover {
     background-color: #c82333;
+}
+/*-------------------------ALARME--------------------------*/
+#paginaalarme
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    font-family: Arial, sans-serif;
+}
+.paginalarme1
+{
+    text-align: center;
+}
+.circle {
+    width: 250px;
+    height: 155px;
+    background-color: #ffffffc8;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: pulse 2s infinite;
+    font-size: 45px;
+    padding-top: 95px;
+    color: rgba(0, 0, 0, 0.458);
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 

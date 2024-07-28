@@ -746,7 +746,7 @@ main#calendario-cor {
     width: 95%;
     height: auto;
     margin-top: 30px;
-    
+    margin-left: -5px;
     text-align: center;    
     
   }
@@ -757,8 +757,9 @@ main#calendario-cor {
     display: flex;
     color: var(--color-weekdays);
     margin: auto;   
-    margin-left: -5px;
+    margin-left: -10px;
     margin-top: 75px;
+    
     
   }
   

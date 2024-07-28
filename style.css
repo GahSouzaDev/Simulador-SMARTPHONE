@@ -1007,7 +1007,7 @@ main#calendario-cor {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 60px;
     text-align: center;
-    margin-left: -15PX;
+    margin-left: -16PX;
 }
 
 .despertador {
@@ -1102,7 +1102,7 @@ main#calendario-cor {
     
 }
 .circle {
-    margin-left: -10px;
+    margin-left: -15px;
     width: 250px;
     height: 155px;
     background-color: #ffffffc8;

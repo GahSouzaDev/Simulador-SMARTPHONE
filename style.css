@@ -5,7 +5,8 @@ body/*configurações gerais*/
     position: absolute;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 100%;
-    margin: 0;
+    width: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,7 +523,7 @@ button:disabled
 /*------------------------CONFIGURAÇÃO------------------------*/
 #appconfiguracao
 {
-    margin-left: -10px;
+    
     margin-top: 10px;
     margin-bottom: 10px;
     height: 655px;    
@@ -535,7 +536,7 @@ button:disabled
     font-size: 25px;
 }
 #config1 {
-    margin-left: -5px;
+    
     display: inline;    
     margin-top: 20px;     
     background: rgba(0, 0, 0, 0.754);   
@@ -552,11 +553,10 @@ button:disabled
 }
 #appconfiguracao i
 {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto;
 }
 #config1:hover {
-    margin-left: 1px;
+    
     transform: scale(1.1); /* Leve aumento ao passar o mouse */
     transition: transform 0.5s ease;
      /* Ajuste o padding para criar o efeito de aumento */
@@ -586,8 +586,7 @@ button:disabled
 }
 /*----------pagina de configurações de tela----------*/
 #appconfigtela
-{
-    margin-left: -10px;
+{     
     margin-top: 10px;
     margin-bottom: 10px;
     height: 655px;    
@@ -683,9 +682,7 @@ main#calendario-cor {
     justify-content: center;    
     height: 655px;
     width: 380px;    
-    z-index: 60;
-    padding-left: -10px;
-    margin-left: -10px;       
+    z-index: 60;      
   }
   #monthDisplay
   {
@@ -749,18 +746,19 @@ main#calendario-cor {
     width: 95%;
     height: auto;
     margin-top: 30px;
-    margin-left: -5px;
+    
     text-align: center;    
-    margin-left: -10px;
     
   }
   
   #weekdays {
-    margin-top: 60px;
+    
     width: 100%;
     display: flex;
     color: var(--color-weekdays);
+    margin: auto;   
     margin-left: -5px;
+    margin-top: 75px;
     
   }
   
@@ -814,7 +812,7 @@ main#calendario-cor {
     color: white;
     border-radius: 5px;
     max-height: 55px;
-    margin-left: -1px;
+    margin: auto;
     overflow: hidden;
     
   }
@@ -840,7 +838,7 @@ main#calendario-cor {
     border-radius: 5px;        
     position: absolute;
     font-family: sans-serif;    
-    margin-left: -5px;
+    
   }
   
   #eventTitleInput {
@@ -914,8 +912,7 @@ main#calendario-cor {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     border-radius: 8px;
-    font-size: 20px;
-    margin-left: 15px;
+    font-size: 20px;    
 }
 
 #inputclima 
@@ -938,6 +935,13 @@ main#calendario-cor {
 {
     margin-top: 20px;
     white-space: pre-wrap; /* Para lidar com quebras de linha */
+}
+#textclima
+{
+    margin-top: -10px;
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
 }
 
 /*-------------------------NAVEGAÇÂO-------------------------*/

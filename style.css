@@ -891,7 +891,47 @@ main#calendario-cor {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
   }
-  
+
+/*-------------------------APP-CLIMA-------------------------*/
+#appclima 
+{    
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+#clima
+ {
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+#inputclima 
+{
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+}
+
+#buttonclima 
+{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#weatherInfo 
+{
+    margin-top: 20px;
+    white-space: pre-wrap; /* Para lidar com quebras de linha */
+}
+
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/
 {

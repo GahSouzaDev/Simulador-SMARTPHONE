@@ -118,6 +118,9 @@ function calendario() {
 function dispertador() {
     window.location.assign('app-dispertador.html');
 }
+function appclima() {
+    window.location.assign('app-clima.html');
+}
 
 function inicio() {
     window.location.assign('index.html');
@@ -138,7 +141,8 @@ function voltar() {
     } else if (currentPath.endsWith('app-configuracao.html')) {
         window.location.assign('index.html');
     } else if (currentPath.endsWith('app-calculadora.html') || 
-               currentPath.endsWith('app-camera.html') || 
+               currentPath.endsWith('app-camera.html') ||               
+               currentPath.endsWith('app-clima.html') ||
                currentPath.endsWith('app-gravador.html') || 
                currentPath.endsWith('app-em-desenvolvimento.html')
                || 

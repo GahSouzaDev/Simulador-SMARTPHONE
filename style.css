@@ -461,8 +461,7 @@ button:disabled
 
 /*-------------------------CALCULADORA-------------------------*/
 #appcalculadora
-{    
-    margin-left: -10px;
+{     
     margin-top: 10px;
     margin-bottom: 10px;
     height: 655px;    
@@ -528,6 +527,7 @@ button:disabled
     margin-bottom: 10px;
     height: 655px;    
     width: 380px;   
+    
 }
 #textconfig
 {
@@ -536,7 +536,7 @@ button:disabled
     font-size: 25px;
 }
 #config1 {
-    
+    margin-left: -5px;
     display: inline;    
     margin-top: 20px;     
     background: rgba(0, 0, 0, 0.754);   
@@ -812,10 +812,11 @@ main#calendario-cor {
     background-color: var(--event-color);
     color: white;
     border-radius: 5px;
-    max-height: 55px;
+    max-height: 1px;
+    max-width: 25px;
     margin: auto;
     overflow: hidden;
-    
+    margin-left: -7px;
   }
   
   .padding 
@@ -839,7 +840,7 @@ main#calendario-cor {
     border-radius: 5px;        
     position: absolute;
     font-family: sans-serif;    
-    
+    margin-left: -5px;
   }
   
   #eventTitleInput {
@@ -879,7 +880,9 @@ main#calendario-cor {
   
   #eventText {
     font-size: 20px;
-  }
+    white-space: pre-wrap; /* Mantém a quebra de linha no texto */
+    word-wrap: break-word; /* Quebra linhas longas */
+}
   
   #modalBackDrop {
     display: none;
@@ -914,6 +917,7 @@ main#calendario-cor {
     width: 300px;
     border-radius: 8px;
     font-size: 20px;    
+    margin-left: 15px;
 }
 
 #inputclima 

@@ -73,7 +73,7 @@ header
 }
 
 /* Configurações do ícone de sinal na barra de notificações */
-.fas.fa-wifi, .fas.fa-video, .fas.fa-microphone {
+.fas.fa-wifi, .fas.fa-video, .fas.fa-microphone, .fas.fa-map-marker-alt{
     font-size: 18px;
     color: #ffffff;
     margin: 0 10px;

@@ -1005,9 +1005,9 @@ main#calendario-cor {
     background-color: rgba(0, 0, 0, 0.72);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 60px;
     text-align: center;
-    margin-left: -10PX;
+    margin-left: -15PX;
 }
 
 .despertador {
@@ -1018,7 +1018,9 @@ main#calendario-cor {
 
 #hora-despertador {
     font-size: 48px;
-    margin: 20px 0;
+    margin-top: 50px;
+    margin-left: -5px;
+
 }
 
 .frame-despertador {
@@ -1026,17 +1028,19 @@ main#calendario-cor {
     justify-content: center;
     gap: 15px;
     margin-bottom: 50px;
+    margin-top: 20px;
+    margin-left: -5px
     
 }
 
 .alarm-controls {
-    flex: 1;
+    flex: 1;       
 }
 
 .alarm-controls select {
     padding: 10px;
     font-size: 16px;
-    width: 100%;
+    width: 100%;    
 }
 
 #btnSetAlarmDespertador {
@@ -1050,6 +1054,7 @@ main#calendario-cor {
     cursor: pointer;
     margin-left: 30PX;
     margin-top: 30PX;
+    margin-left: 25px;
 }
 
 #btnSetAlarmDespertador:hover {

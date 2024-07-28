@@ -991,6 +991,97 @@ main#calendario-cor {
 .hidden {
     display: none;
 }
+/*-------------------------APP-DESPERTADOR-----------------*/
+#despertador01 
+{
+    display: flex;   
+    justify-content: center;    
+    height: 655px;
+    width: 380px;    
+    z-index: 60; 
+}
+
+#appdespertador {
+    background-color: rgba(0, 0, 0, 0.72);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-left: -10PX;
+}
+
+.despertador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hora-despertador {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.frame-despertador {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    
+}
+
+.alarm-controls {
+    flex: 1;
+}
+
+.alarm-controls select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#btnSetAlarmDespertador {
+    
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #7f7f7f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 40PX;
+    margin-top: 30PX;
+}
+
+#btnSetAlarmDespertador:hover {
+    background-color: #0056b3;
+}
+
+#alarmListDespertador {
+    list-style-type: none;
+    padding: 0;
+}
+
+#alarmListDespertador li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#alarmListDespertador li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#alarmListDespertador li button:hover {
+    background-color: #c82333;
+}
+
 
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/

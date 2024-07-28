@@ -1,4 +1,6 @@
 @charset "UTF-8";
+   
+
 
 body/*configurações gerais*/
 {
@@ -12,6 +14,11 @@ body/*configurações gerais*/
     align-items: center;
     background-color: rgba(0, 0, 0, 0.725);    
     color: white;     
+} 
+* 
+{
+    margin: 0;
+    padding: 0;        
 }
 main/*Configurações do contorno do celular*/
 {   
@@ -498,7 +505,7 @@ button:disabled
       display: flex;    
       align-items: center;        
       gap: 45px;
-      margin-left: 4px; 
+      margin-left: 3px; 
       
   }/*Configura propriedades dos icones*/
   #calculadora-icones
@@ -911,7 +918,7 @@ main#calendario-cor {
 
 #clima
  {
-    margin: 100px auto;
+    margin-top: 20px;
     padding: 20px;
     background-color: #000000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -948,6 +955,37 @@ main#calendario-cor {
     font-size: 30px;
     padding-top: 20px;
     text-align: center;
+}
+#img-div
+{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+}
+#img-clima1
+{    
+    height: 20px;
+    width: 100%;
+}
+#img-div-final
+{
+    
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    border-radius: 8px;
+    font-size: 20px;    
+    margin-left: 10px;
+    
+}
+#img-clima2
+{
+    width: 150px;    
+}
+.hidden {
+    display: none;
 }
 
 /*-------------------------NAVEGAÇÂO-------------------------*/

@@ -73,11 +73,14 @@ function getWeather(city, state) {
                 const weatherDescription = data.weather[0].description;
                 const humidity = data.main.humidity;
                 const windSpeed = data.wind.speed;
-
+            
                 document.getElementById('weatherInfo').innerText = `Previsão do tempo:\nTemperatura: ${temp}°C\nDescrição: ${weatherDescription}\nHumidade: ${humidity}%\nVelocidade do Vento: ${windSpeed} m/s`;
+                document.getElementById('img-div').classList.remove('hidden'); // Remove a classe 'hidden' para exibir a div
+                document.getElementById('img-div-final').classList.remove('hidden');
             } else {
                 document.getElementById('weatherInfo').innerText = "Não foi possível obter a previsão do tempo.";
             }
+            
         })
         .catch(error => {
             console.error('Erro ao buscar dados de previsão do tempo:', error);

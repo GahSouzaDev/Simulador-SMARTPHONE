@@ -1097,8 +1097,10 @@ main#calendario-cor {
 .paginalarme1
 {
     text-align: center;
+    margin-left: -10PX;
 }
 .circle {
+    
     width: 250px;
     height: 155px;
     background-color: #ffffffc8;

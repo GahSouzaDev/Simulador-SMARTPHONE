@@ -2,6 +2,7 @@
 
 body/*configurações gerais*/
 {
+    position: absolute;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 100%;
     margin: 0;
@@ -896,7 +897,13 @@ main#calendario-cor {
 #appclima 
 {    
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #f0f0f0;    
+    justify-content: center;    
+    height: 655px;
+    width: 380px;    
+    z-index: 60;
+    padding-left: -10px;
+    margin-left: -10px;    
 }
 
 #clima
@@ -908,6 +915,7 @@ main#calendario-cor {
     width: 300px;
     border-radius: 8px;
     font-size: 20px;
+    margin-left: 15px;
 }
 
 #inputclima 

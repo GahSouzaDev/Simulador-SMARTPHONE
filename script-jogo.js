@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const personagem = document.getElementById('personagem');
     const pipe = document.getElementById('pipe');
+    const pontuacaoDisplay = document.getElementById('pontuacao');
+
+    let startTime, intervalId;
 
     // Inicialmente oculta os elementos 'personagem' e 'pipe'
     personagem.style.display = 'none';
@@ -23,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Torna os elementos 'personagem' e 'pipe' visíveis
         personagem.style.display = 'block';
         pipe.style.display = 'block';
+
+        startTime = Date.now();
+        intervalId = setInterval(() => {
+            const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+            pontuacaoDisplay.textContent = `Tempo: ${elapsedTime}s`;
+        }, 1000);
 
         const jump = () => {
             personagem.classList.add('jump');
@@ -49,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 personagem.style.marginLeft = '50px';
 
                 clearInterval(loop);
+                clearInterval(intervalId);
 
                 // Mostrar o botão de reinício somente quando o jogo estiver em game over
                 restartButton.style.display = 'block';

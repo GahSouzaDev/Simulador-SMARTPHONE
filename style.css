@@ -1255,10 +1255,15 @@ main#calendario-cor {
 #pontuacao
 {
     text-align: center;
-    font-size: 25px;   
+    font-size: 25px;    
     background-color: rgba(0, 0, 0, 0.357);
-    padding: 15px      
+    padding: 20px      
 }
+#countdown
+{
+    color: black;     
+}
+
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/
 {

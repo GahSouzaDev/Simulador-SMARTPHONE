@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('startButton');
     const restartButton = document.getElementById('restartButton');
@@ -8,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const personagem = document.getElementById('personagem');
     const pipe = document.getElementById('pipe');
     const pontuacaoDisplay = document.getElementById('pontuacao');
+    const jumpSound = document.getElementById('jumpSound'); // Adicionando o elemento de áudio de pulo
+    const backgroundMusic = document.getElementById('backgroundMusic'); // Adicionando o elemento de áudio de fundo
+    const gameOverSound = document.getElementById('gameOverSound'); // Adicionando o elemento de áudio de game over
 
     let startTime, intervalId;
     let pipeAnimationDuration = 1.35; // Valor inicial da duração da animação em segundos
@@ -20,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Remove a classe 'botaooff' do botão ao iniciar
     startButton.classList.remove('botaooff');
+
+    // Reproduz a música ao carregar a página
+    backgroundMusic.play();
 
     // Função para reiniciar o valor da animação do pipe
     const resetPipeAnimation = () => {
@@ -50,16 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
             pipeAnimationDuration -= speedDecrease;
             if (pipeAnimationDuration < 0.1) pipeAnimationDuration = 0.1; // Limita a duração mínima da animação
             pipe.style.animationDuration = `${pipeAnimationDuration}s`;
-            pontuacaoDisplay.textContent = `Tempo: ${Math.floor((Date.now() - startTime) / 1000)}s`;
         };
 
         const animationInterval = setInterval(decreaseAnimationDuration, 1000);
 
         const jump = () => {
+            // Reproduz o áudio de pulo
+            jumpSound.currentTime = 0; // Reinicia o áudio para tocar do início
+            jumpSound.play();
+
+            // Adiciona a animação de pulo
             personagem.classList.add('jump');
             setTimeout(() => {
                 personagem.classList.remove('jump');
-            }, 800);
+            }, 800); // Duração da animação de pulo
         };
 
         const loop = setInterval(() => {
@@ -82,6 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(loop);
                 clearInterval(intervalId);
                 clearInterval(animationInterval); // Para a atualização da duração da animação
+
+                // Para a música de fundo e reproduz a música de game over
+                backgroundMusic.pause();
+                backgroundMusic.currentTime = 0; // Reinicia a música de fundo
+                gameOverSound.play(); // Reproduz a música de game over
 
                 // Mostrar o botão de reinício somente quando o jogo estiver em game over
                 restartButton.style.display = 'block';

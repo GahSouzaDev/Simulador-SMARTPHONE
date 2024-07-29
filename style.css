@@ -1239,7 +1239,26 @@ main#calendario-cor {
     font-size: 24px;
     display: none;
 }
-
+#botao-jogo-inicio
+{
+    color: black;
+    position: absolute;
+    width: 200px;
+}
+#botao-jogo-reiniciar
+{
+    position: absolute;
+    width: 200px;
+    margin-left: -95px;
+    margin-top: -110px;
+}
+#pontuacao
+{
+    text-align: center;
+    font-size: 25px;   
+    background-color: rgba(0, 0, 0, 0.357);
+    padding: 15px      
+}
 /*-------------------------NAVEGAÇÂO-------------------------*/
 footer/*Configura espaço*/
 {

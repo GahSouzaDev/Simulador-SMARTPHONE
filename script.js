@@ -121,6 +121,9 @@ function dispertador() {
 function appclima() {
     window.location.assign('app-clima.html');
 }
+function jogo() {
+    window.location.assign('jogo.html');
+}
 
 function inicio() {
     window.location.assign('index.html');
@@ -145,6 +148,8 @@ function voltar() {
                currentPath.endsWith('app-clima.html') ||
                currentPath.endsWith('app-gravador.html') || 
                currentPath.endsWith('app-em-desenvolvimento.html')
+               || 
+               currentPath.endsWith('jogo.html')
                || 
                currentPath.endsWith('app-calendario.html')
                || 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispertador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <main>
+
+        <header><!--Barra de notificações-->
+            <i class="fas fa-wifi"></i>
+            <button id="notificacao" onclick="notificacoes()"><!--Acionador da barra de notificações-->
+                <strong>NOTIFICAÇÕES</strong>            
+            </button>
+            <div id="notifica"><!--Conteudo da barra de notificações-->
+                   <div id="intnotifica">
+                    <p></p><!--Exibe a data na barra de notificações--> 
+                   <p id="data">Notificação</p>
+                   </div>
+            </div>
+            <div id="hora"><!--Hora na barra de notificações-->
+            </div>                        
+        </header>
+
+        <section id="jogo"><!--Corpo do dispositivo-->
+            
+            <di class="game-board">
+                <img src="mario.gif" alt="Imagem do personagem" id="personagem">
+                <img src="pipe.png" alt="Imagem tubo jogo" id="pipe">
+               
+
+            </div>
+        </section>
+
+        <footer><!--Botões de navegação-->
+            <div id="configura"><!--Conteudo da barra de notificações-->                
+                <p id="data">Ajustes</p>
+                <div id="brightness-overlay"></div>
+
+    <div id="brightness-control">
+        <label for="brightness-range">Brilho:</label>
+        <input type="range" id="brightness-range" min="25" max="100" value="100">
+    </div>
+    <div class="toggle-container">
+        <div class="toggle-switch">
+            <input type="checkbox" id="invert-toggle" onclick="toggleInvertColors()">
+            <label for="invert-toggle" class="switch-label">
+                <span class="switch-button"></span><span class="switch-text">Modo: Inversão de cores</span>
+            </label>
+        </div>
+        
+    </div>
+    <script>
+        function toggleInvertColors() {
+            const body = document.body;
+            const toggle = document.getElementById('invert-toggle');
+            body.classList.toggle('invert-colors', toggle.checked);
+        }
+    </script>
+    <script src="script-configuracao.js"></script>
+                
+        </div>
+        </div>
+         </div>
+            <button class="nav-button back-button" title="Voltar" onclick="voltar()"></button>
+            <button class="nav-button home-button" title="Tela Inicial"
+            onclick="inicio()"></button>
+            <button class="nav-button history-button" title="Configuracao" onclick="configuracoes()"></button>
+        </footer>
+
+    </main>
+<script src="script.js"></script>
+<script src="script-notificacoes.js"></script>
+<script src="script-jogo.js"></script>
+</body>
+
+</html>

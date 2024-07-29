@@ -19,7 +19,15 @@ const loop = setInterval(()=>{
     {
         pipe.style.animation = 'none'
         pipe.style.left = `${pipePosition}px`
+
+         personagem.style.animation = 'none'
+        personagem.style.bottom = `${personagemPosition}px`
+
+        personagem.src = "game-over.png";
+        personagem.style.width ='95px'
+        personagem.style.marginLeft ='50px'
          
+        clearInterval(loop);
     }
 },10)
     

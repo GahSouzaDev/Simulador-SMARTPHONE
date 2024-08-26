@@ -571,10 +571,6 @@ button:disabled
     
 }
 
-/* Estado ativo */
-
-/* Estado não ativo */
-
 #config2
 {
     color: #d8d8d8;
@@ -670,6 +666,10 @@ button:disabled
 }
 /*----------pagina de configurações | Sobre o projeto----------*/
 
+#sobre
+{
+    
+}
 /*-------------------------CALENDARIO-------------------------*/
 main#calendario-cor {
     --body-color: #ffffff00;

@@ -588,6 +588,15 @@ button:disabled
     color: #989898;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/*-----------------sobre---------------------*/
+#sobre{
+    text-align: center;
+
+}
+#titulo-sobre
+{
+    margin-bottom: 20px;
+}
 /*----------pagina de configurações de tela----------*/
 #appconfigtela
 {     

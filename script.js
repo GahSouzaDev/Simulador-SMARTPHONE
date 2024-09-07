@@ -111,6 +111,14 @@ function appconfiguracoes() {
 function github() {
     window.open('https://github.com/GahSouzaDev', '_blank');
 }
+function site() {
+    window.open('https://gahsouzadev.github.io/SITE-REPOSITORIO/', '_blank');
+}
+
+function linkedin() {
+    window.open('https://www.linkedin.com/in/emerson-gabriel-souza-558841324/', '_blank');
+}
+
 
 function calendario() {
     window.location.assign('app-calendario.html');

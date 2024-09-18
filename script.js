@@ -129,9 +129,7 @@ function dispertador() {
 function appclima() {
     window.location.assign('app-clima.html');
 }
-function jogo() {
-    window.location.assign('jogo.html');
-}
+
 
 function inicio() {
     window.location.assign('index.html');
